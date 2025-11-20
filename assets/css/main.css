@@ -1523,6 +1523,11 @@ section,
   display: none !important;
 }
 
+.disabled-service {
+  cursor: default;
+  text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
