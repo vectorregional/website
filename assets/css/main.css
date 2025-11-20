@@ -757,7 +757,8 @@ section,
 }
 
 .section-title p {
-  margin-bottom: 0;
+  color: #4D8A62;         /* o el color que vos quieras */
+  font-style: italic;  /* cursiva */
 }
 
 /*--------------------------------------------------------------
