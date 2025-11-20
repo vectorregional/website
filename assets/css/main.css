@@ -1507,11 +1507,19 @@ section,
   color: var(--accent-color);
 }
 
+/*--------------------------------------------------------------
+# agregados por mi 
+--------------------------------------------------------------*/
+
 .btn-get-started {
   display: none !important;
 }
 
 .btn-watch-video {
+  display: none !important;
+}
+
+.navmenu .dropdown {
   display: none !important;
 }
 
