@@ -1536,3 +1536,14 @@ section,
   /* Add your styles here */
 }
 
+/* ===============================
+   TEAM – Ajuste de imágenes mobile
+   =============================== */
+
+@media (max-width: 768px) {
+  .team .member img {
+    max-width: 180px;
+    margin: 0 auto;
+    display: block;
+  }
+}
