@@ -1,0 +1,55 @@
+---
+title: ""
+output:
+  html_document:
+    self_contained: false
+    css:
+      - C:/Repositorios/website/assets/css/main.css
+      - C:/Repositorios/website/archivos/report.css
+    includes:
+      before_body: C:/Repositorios/website/archivos/header.html
+      after_body: C:/Repositorios/website/archivos/footer.html
+---
+
+---
+title: ""
+output:
+  html_document:
+    self_contained: false
+    includes:
+      in_header: C:/Repositorios/website/archivos/header.html
+      after_body: C:/Repositorios/website/archivos/footer.html
+    css: C:/Repositorios/website/assets/css/main.css
+---
+
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+```{=html}
+<main class="main">
+  <article class="report">
+    <div class="report-container">
+
+      <header class="report-header">
+        <p class="report-kicker">Big Data · Transporte urbano</p>
+        <h1>¿Qué pasa si no se utilizan modelos profesionales de predicción?</h1>
+        <p class="report-date">Agosto 2025</p>
+      </header>
+
+      <section class="report-body">
+        <p>
+          Este informe analiza las consecuencias de utilizar métodos naïve de predicción frente
+          a enfoques profesionales basados en técnicas de machine learning, aplicados a la demanda
+          diaria del transporte urbano en la ciudad de Santa Fe.
+        </p>
+
+        <a href="demanda_transporte_ml.pdf"
+           class="btn btn-primary"
+           download>
+          Descargar informe completo (PDF)
+        </a>
+      </section>
+
+    </div>
+  </article>
+</main>
+```
