@@ -1,36 +1,202 @@
-/* ===== Report layout ===== */
-.report { padding: 5rem 0; }
+/* =========================================================
+   REPORT.CSS — Estilo editorial alineado al PDF institucional
+   ========================================================= */
 
-.report-container{
+
+/* ===== Sección principal del report ===== */
+.report {
+  padding: 5rem 0;
+  /* Espacio vertical editorial */
+
+  background-color: #ffffff;
+  /* Fondo blanco como en el PDF */
+
+  text-align: left;
+  /* CLAVE: fuerza alineación izquierda del contenido */
+}
+
+
+/* ===== Contenedor editorial ===== */
+.report-container {
   max-width: 820px;
-  margin: 0 auto;
+  /* Longitud de línea tipo paper */
+
+  margin-left: 2rem;
+  /* Alinea el bloque del informe a la izquierda,
+     manteniendo un margen editorial similar al PDF */
+
+  margin-right: auto;
+  /* Evita el centrado horizontal */
+
   padding: 0 1.5rem;
 }
 
-.report-header{ margin-bottom: 3rem; }
+/* ===== Header del informe ===== */
+.report-header {
+  margin-bottom: 1rem;
 
-.report-kicker{
+  border-left: 4px solid #0E3E36;
+  /* Verde principal institucional */
+
+  padding-left: 1.2rem;
+
+  text-align: left;
+  /* Fuerza alineación izquierda del título */
+}
+
+
+/* ===== Kicker / categoría ===== */
+.report-kicker {
   font-size: 0.9rem;
+
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #6c757d;
+
+  color: #4D8A62;
+  /* Verde secundario */
+
   margin-bottom: 0.5rem;
 }
 
-.report-header h1{
+
+/* ===== Título principal ===== */
+.report-header h1 {
   font-size: 2.6rem;
   line-height: 1.2;
   font-weight: 700;
+
+  color: #0E3E36;
+  /* Verde principal */
+
   margin-bottom: 1rem;
+
+  text-align: left;
 }
 
-.report-date{
+
+/* ===== Fecha ===== */
+.report-date {
   font-size: 0.9rem;
   color: #6c757d;
+
+  text-align: left;
 }
 
-.report-body p{
+
+/* ===== Cuerpo del informe ===== */
+.report-body {
+  text-align: left;
+  /* Evita cualquier centrado heredado */
+}
+
+.report-body p {
   font-size: 1.05rem;
   line-height: 1.75;
+
+  color: #2f2f2f;
+  /* Gris editorial, similar al PDF */
+
   margin-bottom: 1.4rem;
+}
+
+
+/* ===== Subtítulos (si los usás luego) ===== */
+.report-body h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+
+  color: #0E3E36;
+
+  text-align: left;
+}
+
+
+/* ===== Botón de descarga ===== */
+.report-body .btn-primary {
+  background-color: #4D8A62;
+  border-color: #4D8A62;
+
+  font-weight: 500;
+}
+
+.report-body .btn-primary:hover {
+  background-color: #0E3E36;
+  border-color: #0E3E36;
+}
+
+/* ===== Enlaces de descarga editoriales ===== */
+.download-link {
+  position: relative;
+  display: block;
+  padding-left: 5.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+/* Línea inicial */
+.download-link::before {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  width: 2rem;
+  height: 2px;
+  transform: translateY(-50%);
+  transition: width 0.25s ease;
+}
+
+/* Flecha (oculta por defecto) */
+.download-link::after {
+  content: "";
+  position: absolute;
+  left: calc(2rem + 1.3rem);
+  top: 50%;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-50%) rotate(-45deg);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover: línea se acorta + aparece flecha */
+.download-link:hover::before {
+  width: 1.2rem;
+}
+
+.download-link:hover::after {
+  opacity: 1;
+}
+
+/* ===== Variantes cromáticas ===== */
+.download-link.primary {
+  color: #C9483B; /* rojo editorial */
+}
+
+.download-link.primary::before {
+  background-color: #C9483B;
+}
+
+.download-link.secondary {
+  color: #6FAFB0; /* verde-azulado técnico */
+}
+
+.download-link.secondary::before {
+  background-color: #6FAFB0;
+}
+
+/* ===== Contenedor de descargas ===== */
+.report-downloads {
+  margin-top: 1rem;
+}
+
+/* Espaciado solo si hay más de un descargable */
+.report-downloads .download-link + .download-link {
+  margin-top: 2.2rem;
 }

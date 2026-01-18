@@ -36,17 +36,46 @@ output:
       </header>
 
       <section class="report-body">
+      
         <p>
-          Este informe analiza las consecuencias de utilizar métodos naïve de predicción frente
-          a enfoques profesionales basados en técnicas de machine learning, aplicados a la demanda
-          diaria del transporte urbano en la ciudad de Santa Fe.
-        </p>
+La toma de decisiones en contextos económicos y productivos depende crecientemente de la capacidad de
+anticipar variables clave. Sin embargo, en muchos ámbitos todavía se utilizan métodos de predicción
+simplificados —o directamente reglas heurísticas— que ignoran la estructura de los datos y su dinámica
+temporal.
+</p>
 
-        <a href="demanda_transporte_ml.pdf"
-           class="btn btn-primary"
-           download>
-          Descargar informe completo (PDF)
-        </a>
+<p>
+Este trabajo analiza las consecuencias de ese enfoque, comparando modelos naïve de predicción con modelos
+profesionales basados en técnicas modernas de machine learning. A través de un caso empírico concreto,
+mostramos que los modelos profesionales no solo reducen de manera significativa el error de predicción,
+sino que además producen estimaciones más estables, consistentes y replicables.
+</p>
+
+<p>
+Los resultados sugieren que la elección del método de predicción no es una decisión técnica menor, sino
+un determinante central de la calidad de la información utilizada para planificar, evaluar políticas y
+asignar recursos. En este sentido, el uso de modelos profesionales constituye una mejora cualitativa en
+la capacidad de anticipación frente a enfoques simplificados.
+</p>
+
+
+        <div class="report-downloads">
+
+  <a href="demanda_transporte_ml.pdf"
+     class="download-link primary"
+     download>
+    Descargar documento de trabajo
+  </a>
+
+  <!-- Opcional: solo si existe -->
+  <a href="resumen_ejecutivo.pdf"
+     class="download-link secondary"
+     download>
+    Descargar resumen ejecutivo
+  </a>
+
+</div>
+        
       </section>
 
     </div>

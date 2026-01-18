@@ -3,31 +3,152 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>¿Qué pasa si no se utilizan modelos profesionales de predicción?</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Main CSS -->
-  <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- CSS específico del informe -->
-  <link href="archivos/report.css" rel="stylesheet">
 
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<title>demanda-ml.knit</title>
+
+<script src="demanda-ml_files/header-attrs-2.30/header-attrs.js"></script>
+<script src="demanda-ml_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="demanda-ml_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="demanda-ml_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="demanda-ml_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="demanda-ml_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="demanda-ml_files/navigation-1.1/tabsets.js"></script>
+<link href="demanda-ml_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="demanda-ml_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="C:/Repositorios/website/assets/css/main.css" type="text/css" />
+<link rel="stylesheet" href="C:/Repositorios/website/archivos/report.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
 
 </head>
-
 
 <body>
 
@@ -36,54 +157,42 @@
 
 
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
+ <header id="header" class="header d-flex align-items-center sticky-top">
 
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+  <!-- Bootstrap Icons (necesario para menú y redes) -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">
-          <span style="font-weight:700;">Vector Regional</span> consultores
-        </h1>
+  <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      </a>
+    <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <h1 class="sitename">
+        <span style="font-weight:700;">Vector Regional</span> consultores
+      </h1>
+    </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Servicios</a></li>
-          <!-- <li><a href="index.html#portfolio">Trabajos</a></li> -->
-          <li><a href="index.html#team">Equipo</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="index.html#contact">Contacto</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Servicios</a></li>
+        <li><a href="index.html#team">Equipo</a></li>
+        <li><a href="index.html#contact">Contacto</a></li>
+      </ul>
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+    </nav>
 
-      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+  </div>
+</header>
 
-    </div>
-  </header>
+<div id="header">
 
 
+
+
+</div>
+
+
+<p><link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"></p>
 <main class="main">
   <article class="report">
     <div class="report-container">
@@ -95,109 +204,163 @@
       </header>
 
       <section class="report-body">
+      
         <p>
-          Este informe analiza las consecuencias de utilizar métodos naïve de predicción frente
-          a enfoques profesionales basados en técnicas de machine learning, aplicados a la demanda
-          diaria del transporte urbano en la ciudad de Santa Fe.
-        </p>
+La toma de decisiones en contextos económicos y productivos depende crecientemente de la capacidad de
+anticipar variables clave. Sin embargo, en muchos ámbitos todavía se utilizan métodos de predicción
+simplificados —o directamente reglas heurísticas— que ignoran la estructura de los datos y su dinámica
+temporal.
+</p>
 
-        <a href="demanda_transporte_ml.pdf"
-           class="btn btn-primary"
-           download>
-          Descargar informe completo (PDF)
-        </a>
+<p>
+Este trabajo analiza las consecuencias de ese enfoque, comparando modelos naïve de predicción con modelos
+profesionales basados en técnicas modernas de machine learning. A través de un caso empírico concreto,
+mostramos que los modelos profesionales no solo reducen de manera significativa el error de predicción,
+sino que además producen estimaciones más estables, consistentes y replicables.
+</p>
+
+<p>
+Los resultados sugieren que la elección del método de predicción no es una decisión técnica menor, sino
+un determinante central de la calidad de la información utilizada para planificar, evaluar políticas y
+asignar recursos. En este sentido, el uso de modelos profesionales constituye una mejora cualitativa en
+la capacidad de anticipación frente a enfoques simplificados.
+</p>
+
+
+        <div class="report-downloads">
+
+  <a href="demanda_transporte_ml.pdf"
+     class="download-link primary"
+     download>
+    Descargar documento de trabajo
+  </a>
+
+  <!-- Opcional: solo si existe -->
+  <a href="resumen_ejecutivo.pdf"
+     class="download-link secondary"
+     download>
+    Descargar resumen ejecutivo
+  </a>
+
+</div>
+        
       </section>
 
     </div>
   </article>
 </main>
 
-  <footer id="footer" class="footer position-relative">
+<footer id="footer" class="footer position-relative">
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Vector Regional consultores</span>
+  <div class="container footer-top">
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6 footer-about">
+        <a href="index.html" class="d-flex align-items-center">
+          <span class="sitename">Vector Regional consultores</span>
+        </a>
+        <div class="footer-contact pt-3">
+          <p class="mt-3"><strong>Teléfono:</strong> <span>+54 9 342 627-7550</span></p>
+          <p><strong>Email:</strong> <span>vector.regional.consultores@gmail.com</span></p>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Links útiles</h4>
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <a href="#home">Home</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#about">Acerca de nosotros</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#services">Servicios</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="#team">Equipo</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Nuestros servicios</h4>
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Análisis económico</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Análisis de datos</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Evaluación de políticas públicas</a></li>
+          <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Capacitaciones</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <h4>Seguinos en nuestras redes</h4>
+        <div class="social-links d-flex">
+          <a href="https://www.instagram.com/vector.regional.consultores/">
+            <i class="bi bi-instagram"></i>
           </a>
-          <div class="footer-contact pt-3">
-            <!-- <p>A108 Adam Street</p> -->
-            <!-- <p>New York, NY 535022</p> -->
-            <p class="mt-3"><strong>Teléfono:</strong> <span>+54 9 342 627-7550</span></p>
-            <p><strong>Email:</strong> <span>vector.regional.consultores@gmail.com</span></p>
-          </div>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Links útiles</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#home">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#about">Acerca de nosotros</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#services">Servicios</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#team">Equipo</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nuestros servicios</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="https://vectorregional.github.io/website/index.html#services">Análisis económico</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="https://vectorregional.github.io/website/index.html#services">Análisis de datos</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="https://vectorregional.github.io/website/index.html#services">Evaluación de políticas públicas</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="https://vectorregional.github.io/website/index.html#services">Capacitaciones y asistencia técnica</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12">
-          <h4>Seguinos en nuestras redes</h4>
-          <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
-          <div class="social-links d-flex">
-            <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
-            <!-- <a href=""><i class="bi bi-facebook"></i></a> -->
-            <a href="https://www.instagram.com/vector.regional.consultores/"><i class="bi bi-instagram"></i></a>
-            <!-- <a href=""><i class="bi bi-linkedin"></i></a> -->
-          </div>
-        </div>
-
       </div>
-    </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Vector Regional consultores</strong> <span>Todos los derechos reservados.</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-      </div>
     </div>
+  </div>
 
-      <!-- Scroll Top -->
+  <div class="container copyright text-center mt-4">
+    <p>© <strong class="px-1 sitename">Vector Regional consultores</strong> · Todos los derechos reservados</p>
+  </div>
+
+  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
-  <!-- Main JS File -->
-  <script src="../assets/js/main.js"></script>
-  
-  </footer>
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+</footer>
 
 
 
 </div>
 
+<script>
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
 
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 </body>
 </html>
