@@ -16,18 +16,10 @@
 }
 
 
-/* ===== Contenedor editorial ===== */
 .report-container {
-  max-width: 820px;
-  /* Longitud de línea tipo paper */
-
-  margin-left: 2rem;
-  /* Alinea el bloque del informe a la izquierda,
-     manteniendo un margen editorial similar al PDF */
-
+  width: min(92%, 900px);
+  margin-left: auto;
   margin-right: auto;
-  /* Evita el centrado horizontal */
-
   padding: 0 1.5rem;
 }
 
