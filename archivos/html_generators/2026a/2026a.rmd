@@ -1,0 +1,87 @@
+---
+title: "¿Qué pasa si no se utilizan modelos profesionales de predicción?"
+output:
+  html_document:
+    self_contained: false
+    theme: null
+    highlight: null
+    template: C:/Repositorios/website/archivos/report_template.html
+---
+
+
+```{=html}
+
+<article class="report">
+  <div class="report-container">
+
+<header class="report-header">
+  <p class="report-kicker">Big Data · Transporte urbano</p>
+  <h1>Por qué importa profesionalizar los modelos de predicción</h1>
+  <p class="report-date">Enero 2026</p>
+</header>
+
+<section class="report-body">
+
+  <p style="text-align: justify;">
+  La toma de decisiones en contextos económicos y productivos depende crecientemente de la capacidad de anticipar variables clave. Sin embargo, en muchos ámbitos todavía se utilizan métodos de predicción simplificados —o directamente reglas heurísticas— que ignoran la estructura de los datos y su dinámica temporal.
+  </p>
+
+  <p style="text-align: justify;">
+  Este trabajo analiza las consecuencias de ese enfoque, comparando modelos clásicos de predicción con modelos profesionales basados en técnicas modernas de <em> machine learning</em>. A través de un caso empírico concreto aplicado a la demanda de transporte urbano, se muestra que los modelos profesionales no solo reducen de manera significativa el error de predicción, sino que además producen estimaciones más estables, consistentes y replicables.
+  </p>
+
+  <p style="text-align: justify;">
+  El ejercicio responde a la siguiente cuestión: con datos de consumo diario de SUBE de la linea 5 desde enero de 2022 hasta diciembre de 2024, ¿es posible predecir el año 2025? Asimismo, ¿en cuanto mejoran las predicciones si se emplean métodos diferentes a los tradicionales?. En efecto, el ejercicio se basa en la predicción de la demanda diaria de boletos del sistema de transporte urbano de la ciudad de Santa Fe para el año 2025, utilizando información diaria registrada por el sistema SUBE. En particular, se compara la evolución observada de la demanda con las predicciones generadas por distintos enfoques.
+  </p>
+
+  <!-- TÍTULO DEL GRÁFICO -->
+  <h3 class="figure-title">
+    Figura 1. Modelos de predicción de demanda de transporte diaria. Cantidad de boletos SUBE semanales
+  </h3>
+
+  <!-- CONTENEDOR DEL GRÁFICO -->
+  <div id="grafico-prediccion" class="report-figure">
+```
+
+```{r, echo = F, message = F}
+library(plotly)
+
+
+plotly_obj <- readRDS("grafico/plotly.rds")
+
+
+plotly_obj
+```
+
+```{=html}
+
+  </div>
+
+  <!-- FUENTE -->
+  <p style="font-size: 0.85rem; color: #666;">
+    Fuente: elaboración propia en base a datos del Ministerio de Transporte. Haga click en el modelo para quitar/agregar su visualización.
+  </p>
+
+  <p style="text-align: justify;">
+  Los resultados sugieren que la elección del método de predicción no es una decisión técnica menor, sino un determinante central de la calidad de la información utilizada para planificar, evaluar políticas y asignar recursos. En este sentido, el uso de modelos profesionales constituye una mejora cualitativa en la capacidad de anticipación frente a enfoques tradicionales
+  </p>
+
+  <div class="report-downloads">
+    <a href="folder/main_2026a.pdf" class="download-link primary" download>
+      Descargar documento de trabajo
+    </a>
+  
+    <!--
+    <a href="resumen_ejecutivo.pdf" class="download-link secondary" download>
+      Descargar resumen ejecutivo
+    </a>
+    -->
+  </div>
+</section>
+
+
+  </div>
+</article>
+
+
+```
