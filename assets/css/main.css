@@ -1054,9 +1054,22 @@ section,
   line-height: 1.2;
 }
 
+
+/* Centrar el único botón de detalles en el overlay | agregado el 20/01/2026*/ 
+.portfolio .portfolio-content .portfolio-info .details-link {
+  position: absolute;        /* por si en algún punto no lo hereda */
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, calc(-50% + 80px));   /* 👈 centrado real y bajamos el icono 20px*/
+  font-size: 28px;                    /* ajustá a gusto */
+  line-height: 1;
+  text-decoration: none;              /* sin subrayado */
+}
+
+
 .portfolio .portfolio-content .portfolio-info .preview-link:hover,
 .portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
+  color: #4D8A62 ; /* var(--accent-color) */
 }
 
 .portfolio .portfolio-content .portfolio-info .details-link {

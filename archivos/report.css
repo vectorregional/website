@@ -231,3 +231,15 @@
   text-align: left;
   font-style: italic;
 }
+
+/* =========================================================
+   FIX Plotly — evitar que la leyenda sea recortada
+   ========================================================= */
+
+/* Permite que la leyenda de Plotly sobresalga del gráfico */
+.report-figure,
+.report-figure .html-widget,
+.report-figure .plotly,
+.report-figure .svg-container {
+  overflow: visible !important;
+}

@@ -1,11 +1,11 @@
 ---
-title: "¿Qué pasa si no se utilizan modelos profesionales de predicción?"
+title: "Por qué importa profesionalizar los modelos de predicción"
 output:
   html_document:
     self_contained: false
     theme: null
     highlight: null
-    template: C:/Repositorios/website/archivos/report_template.html
+    template: !expr here::here("archivos", "report_template.html")
 ---
 
 
@@ -16,7 +16,7 @@ output:
 
 <header class="report-header">
   <p class="report-kicker">Big Data · Transporte urbano</p>
-  <h1>Por qué importa profesionalizar los modelos de predicción</h1>
+  <h1>Por qué importa profesionalizar <br> los modelos de predicción</h1>
   <p class="report-date">Enero 2026</p>
 </header>
 
@@ -36,7 +36,7 @@ output:
 
   <!-- TÍTULO DEL GRÁFICO -->
   <h3 class="figure-title">
-    Figura 1. Modelos de predicción de demanda de transporte diaria. Cantidad de boletos SUBE semanales
+    Figura 1. Cantidad de boletos SUBE efectivos y estimados para el año 2025.
   </h3>
 
   <!-- CONTENEDOR DEL GRÁFICO -->
@@ -58,8 +58,13 @@ plotly_obj
   </div>
 
   <!-- FUENTE -->
-  <p style="font-size: 0.85rem; color: #666;">
-    Fuente: elaboración propia en base a datos del Ministerio de Transporte. Haga click en el modelo para quitar/agregar su visualización.
+<p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
+  Fuente: elaboración propia en base al Ministerio de Transporte.
+  
+  <br>
+  
+  <!-- NOTA -->
+    Nota: RN: Redes neuronales · RF: Random forest. Haga clic sobre el modelo para ocultar o mostrar su visualización.
   </p>
 
   <p style="text-align: justify;">
