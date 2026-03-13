@@ -1,0 +1,63 @@
+---
+title: "Ganadores y perdedores del modelo económico vigente"
+output:
+  html_document:
+    self_contained: false
+    theme: null
+    highlight: null
+    template: !expr here::here("archivos", "report_template.html")
+---
+```{=html}
+<article class="report">
+  <div class="report-container">
+
+<header class="report-header">
+  <p class="report-kicker">Macroeconomía · Estructura productiva</p>
+  <h1>Ganadores y perdedores <br> del modelo económico vigente</h1>
+  <p class="report-date">Marzo 2026</p>
+</header>
+
+<section class="report-body">
+
+  <p style="text-align: justify;">
+  El modelo económico vigente desde diciembre de 2023 —caracterizado por el equilibrio fiscal, sesgo monetario restrictivo, apreciación cambiaria y apertura comercial— ha generado una distribución desigual de costos y beneficios entre sectores. A partir de los datos del EMAE para los dos primeros años de gestión, este informe identifica qué sectores crecieron, cuáles retrocedieron y qué implica eso para la estructura productiva argentina.
+  </p>
+
+  <p style="text-align: justify;">
+  Los ganadores del nuevo esquema son, en su mayoría, sectores primarios orientados a la exportación: agricultura, minería y finanzas encabezan el crecimiento. Los perdedores, en cambio, son precisamente los sectores con mayor capacidad de tracción sobre el empleo y la producción doméstica: construcción, industria y comercio acumulan las caídas más pronunciadas respecto de 2023.
+  </p>
+
+  <!-- TÍTULO DEL GRÁFICO -->
+  <h3 class="figure-title">
+    Figura 1. Ganadores y perdedores por participación en el empleo y el valor agregado verticalmente integrados.
+  </h3>
+
+  <!-- CONTENEDOR DEL GRÁFICO -->
+  <div id="grafico-sectores" class="report-figure">
+```
+```{r, echo = F, message = F}
+library(plotly)
+plotly_obj <- readRDS("grafico/plotly.rds")
+plotly_obj
+```
+```{=html}
+  </div>
+
+  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
+    Fuente: Vector Regional en base a INDEC, OCDE y SIPA.
+  </p>
+
+  <p style="text-align: justify;">
+  De mantenerse esta dinámica, la economía argentina avanza hacia una estructura concentrada en sectores de enclave, con bajos encadenamientos internos y creciente informalidad laboral. El documento de trabajo desarrolla en detalle la metodología, los resultados por cuadrante y las perspectivas para 2026.
+  </p>
+
+  <div class="report-downloads">
+    <a href="folder/main_2026b.pdf" class="download-link primary" download>
+      Descargar documento de trabajo
+    </a>
+  </div>
+
+</section>
+  </div>
+</article>
+```
