@@ -12,9 +12,9 @@ output:
 <article class="report">
   <div class="report-container">
 <header class="report-header">
-  <p class="report-kicker">Economía regional · Deporte e infraestructura</p>
+  <p class="report-kicker">sectores económicos · Deporte, infraestructura y turismo</p>
   <h1>Efectos económicos de los <br> XIII Juegos Suramericanos 2026</h1>
-  <p class="report-date">Marzo 2026</p>
+  <p class="report-date">Abril 2026</p>
 </header>
 <section class="report-body">
   <p style="text-align: justify;">
