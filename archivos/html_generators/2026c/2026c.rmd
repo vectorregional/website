@@ -1,0 +1,54 @@
+---
+title: "Efectos económicos de los XIII Juegos Suramericanos 2026"
+output:
+  html_document:
+    self_contained: false
+    theme: null
+    highlight: null
+    template: !expr here::here("archivos", "report_template.html")
+---
+
+```{=html}
+<article class="report">
+  <div class="report-container">
+<header class="report-header">
+  <p class="report-kicker">Economía regional · Deporte e infraestructura</p>
+  <h1>Efectos económicos de los <br> XIII Juegos Suramericanos 2026</h1>
+  <p class="report-date">Marzo 2026</p>
+</header>
+<section class="report-body">
+  <p style="text-align: justify;">
+  Entre el 12 y el 26 de septiembre de 2026 se celebrarán en Rosario —con subsedes en Santa Fe capital y Rafaela— los XIII Juegos Suramericanos. Participarán 15 países y se disputarán 43 deportes y 60 disciplinas. La inversión en obras asciende a <strong>USD 90 millones</strong> y el gasto en consumo vinculado al evento se estima en <strong>USD 143,8 millones</strong>, totalizando un gasto adicional en la provincia de <strong>USD 233,8 millones</strong>.
+  </p>
+  <p style="text-align: justify;">
+  El evento generará <strong>USD 425,6 millones en producción y ventas</strong>, <strong>USD 185 millones en ingresos</strong> para la economía provincial (6,4% del PBG mensual de 2024) y un incremento de la recaudación de al menos <strong>USD 34,5 millones</strong>. En el mercado laboral, alrededor de <strong>25 mil puestos de trabajo</strong> se verán vinculados al evento, equivalentes al 2,7% del empleo en los aglomerados Gran Rosario y Gran Santa Fe.
+  </p>
+  <h3 class="figure-title">
+    Figura 1. Efectos en Valor Agregado y Empleo de los Juegos ODESUR 2026.
+  </h3>
+  <div id="grafico-sectores" class="report-figure">
+```
+
+```{r, echo = F, message = F}
+library(plotly)
+plotly_obj <- readRDS("grafico/plotly.rds")
+plotly_obj
+```
+
+```{=html}
+  </div>
+  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
+    Fuente: Vector Regional en base a estimaciones propias.
+  </p>
+  <p style="text-align: justify;">
+  Más allá de los efectos de corto plazo, las obras de infraestructura dejarán un legado duradero: la Villa Olímpica será reconvertida en viviendas para 346 familias santafesinas. El documento de trabajo desarrolla en detalle la metodología, los supuestos y los resultados completos.
+  </p>
+  <div class="report-downloads">
+    <a href="folder/main_2026b.pdf" class="download-link primary" download>
+      Descargar documento de trabajo
+    </a>
+  </div>
+</section>
+  </div>
+</article>
+```
