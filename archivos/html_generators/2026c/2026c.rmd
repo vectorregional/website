@@ -44,7 +44,7 @@ plotly_obj
   Más allá de los efectos de corto plazo, las obras de infraestructura dejarán un legado duradero: la Villa Olímpica será reconvertida en viviendas para 346 familias santafesinas. El documento de trabajo desarrolla en detalle la metodología, los supuestos y los resultados completos.
   </p>
   <div class="report-downloads">
-    <a href="folder/main_2026b.pdf" class="download-link primary" download>
+    <a href="folder/main_2026c.pdf" class="download-link primary" download>
       Descargar documento de trabajo
     </a>
   </div>
