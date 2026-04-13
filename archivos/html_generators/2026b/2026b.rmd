@@ -1,5 +1,7 @@
 ---
 title: "Ganadores y perdedores del modelo económico vigente"
+description: "Análisis sectorial de los efectos del modelo económico argentino desde diciembre de 2023. Identificación de sectores ganadores y perdedores a partir del EMAE, con implicancias para la estructura productiva y el empleo."
+keywords: "modelo económico Argentina, EMAE, estructura productiva, sectores ganadores, empleo, industria, construcción, exportaciones, macroeconomía, Vector Regional Consultores"
 output:
   html_document:
     self_contained: false
@@ -7,24 +9,21 @@ output:
     highlight: null
     template: !expr here::here("archivos", "report_template.html")
 ---
+
 ```{=html}
 <article class="report">
   <div class="report-container">
-
 <header class="report-header">
   <p class="report-kicker">Macroeconomía · Estructura productiva</p>
   <h1>Ganadores y perdedores <br> del modelo económico vigente</h1>
   <p class="report-date">Marzo 2026</p>
 </header>
-
 <section class="report-body">
-
   <p style="text-align: justify;">
-  El modelo económico vigente desde diciembre de 2023 —caracterizado por el equilibrio fiscal, sesgo monetario restrictivo, apreciación cambiaria y apertura comercial— ha generado una distribución desigual de costos y beneficios entre sectores. A partir de los datos del EMAE para los dos primeros años de gestión, este informe identifica qué sectores crecieron, cuáles retrocedieron y qué implica eso para la estructura productiva argentina.
+  El modelo económico vigente desde diciembre de 2023 —caracterizado por el <strong>equilibrio fiscal, sesgo monetario restrictivo, apreciación cambiaria y apertura comercial</strong>— ha generado una distribución desigual de costos y beneficios entre sectores. A partir de los datos del <strong>EMAE para los dos primeros años de gestión</strong>, este informe identifica qué sectores crecieron, cuáles retrocedieron y qué implica eso para la estructura productiva argentina.
   </p>
-
   <p style="text-align: justify;">
-  Los ganadores del nuevo esquema son, en su mayoría, sectores primarios orientados a la exportación: agricultura, minería y finanzas encabezan el crecimiento. Los perdedores, en cambio, son precisamente los sectores con mayor capacidad de tracción sobre el empleo y la producción doméstica: construcción, industria y comercio acumulan las caídas más pronunciadas respecto de 2023.
+  Los <strong>ganadores</strong> del nuevo esquema son, en su mayoría, sectores primarios orientados a la exportación: <strong>agricultura, minería y finanzas</strong> encabezan el crecimiento. Los <strong>perdedores</strong>, en cambio, son precisamente los sectores con mayor capacidad de tracción sobre el empleo y la producción doméstica: <strong>construcción, industria y comercio</strong> acumulan las caídas más pronunciadas respecto de 2023.
   </p>
 
   <!-- TÍTULO DEL GRÁFICO -->

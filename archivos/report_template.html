@@ -4,13 +4,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$title$</title>
+  <title>$title$ | Vector Regional Consultores</title>
 
-  <!-- RMarkdown / htmlwidgets -->
-  $for(header-includes)$
-    $header-includes$
-  $endfor$
-  $head$
+<!-- SEO -->
+  <meta name="description" content="$description$">
+  <meta name="keywords" content="$keywords$">
+  <meta name="author" content="Vector Regional Consultores">
+
+<!-- Open Graph -->
+  <meta property="og:title" content="$title$">
+  <meta property="og:description" content="$description$">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Vector Regional Consultores">
+
+<!-- RMarkdown / htmlwidgets -->
+$for(header-includes)$
+  $header-includes$
+$endfor$
+$head$
 
   <!-- Fonts -->
    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
@@ -46,6 +57,7 @@
         <li><a href="../index.html#hero">Home</a></li>
         <li><a href="../index.html#about">Qué hacemos</a></li>
         <li><a href="../index.html#services">Servicios</a></li>
+        <li><a href="../index.html#portfolio">Publicaciones</a></li>
         <li><a href="../index.html#team">Equipo</a></li>
         <li><a href="../index.html#contact">Contacto</a></li>
       </ul>

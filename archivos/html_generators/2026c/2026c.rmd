@@ -1,5 +1,7 @@
 ---
 title: "Efectos económicos de los XIII Juegos Suramericanos 2026"
+description: "Estimación de los efectos económicos de los XIII Juegos Suramericanos 2026 en Rosario y Santa Fe: empleo, producción, inversión en infraestructura y recaudación."
+keywords: "juegos suramericanos, ODESUR, Rosario, infraestructura, turismo, empleo, Santa Fe, impacto económico"
 output:
   html_document:
     self_contained: false
@@ -12,7 +14,7 @@ output:
 <article class="report">
   <div class="report-container">
 <header class="report-header">
-  <p class="report-kicker">sectores económicos · Deporte, infraestructura y turismo</p>
+  <p class="report-kicker">Sectores económicos · Deporte, infraestructura y turismo</p>
   <h1>Efectos económicos de los <br> XIII Juegos Suramericanos 2026</h1>
   <p class="report-date">Abril 2026</p>
 </header>
