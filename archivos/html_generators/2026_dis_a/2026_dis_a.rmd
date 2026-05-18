@@ -37,7 +37,9 @@ knitr::opts_chunk$set(
 
 ### La definición oficial
 
-![](graficos/cbt_indec.png)
+```{r, echo=FALSE, out.width="70%", fig.align="left"}
+knitr::include_graphics("graficos/cbt_indec.png")
+```
 Fuente: INDEC (abri de 2026).
 
 <h3 class="figure-title">
