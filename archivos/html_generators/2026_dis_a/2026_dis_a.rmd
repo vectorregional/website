@@ -1,9 +1,7 @@
 ---
 title: "¿Cuántas familias tipo existen realmente?"
-description: "La familia de referencia del INDEC bajo la lupa: cuántos hogares cumplen efectivamente con la definición utilizada para medir la pobreza en Argentina."
-keywords: "familia tipo, INDEC, pobreza, línea de pobreza, EPH, hogares, Argentina, Rosario, Santa Fe"
-author: "Francisco Leiva"
-date: "Mayo 2026"
+description: "Estimación de los efectos económicos de los XIII Juegos Suramericanos 2026 en Rosario y Santa Fe: empleo, producción, inversión en infraestructura y recaudación."
+keywords: "Familia tipo, INDEC, Pobreza, Medición, Inflación, Gran Santa Fe, Gran Rosario"
 output:
   html_document:
     self_contained: false
@@ -12,230 +10,248 @@ output:
     template: !expr here::here("archivos", "report_template.html")
 ---
 
+```{r setup, include=FALSE}
+library(plotly)
+library(htmltools)
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE
+)
+```
+
 ```{=html}
 <article class="report">
-  <div class="report-container">
+<div class="report-container">
+
 <header class="report-header">
   <p class="report-kicker">Economía regional · Hogares y condiciones de vida</p>
   <h1>¿Cuántas familias tipo <br> existen realmente?</h1>
   <p class="report-date">Mayo 2026 · Francisco Leiva</p>
 </header>
+
 <section class="report-body">
-
-  <p style="text-align: justify;">
-  Un lunes a la noche, volviendo a casa, escuchaba el programa de Tato Young por la 99.3. El dato de inflación en la Ciudad de Buenos Aires acababa de publicarse y Tato lo desmenuzaba con la calma de quien ya lleva años haciéndolo. En un momento mencionó, casi al pasar, que para no ser considerada pobre una <em>familia tipo</em> —una pareja de 35 años con dos hijos, uno de nueve y otro de cinco— necesitaba ingresos por casi dos millones y medio de pesos. Ahí mi cabeza hizo clic.
-  </p>
-
-  <p style="text-align: justify;">
-  La pregunta fue inevitable: ¿cuántas familias así existen realmente? La <em>familia tipo</em> no es una figura decorativa. Es el hogar de referencia que el INDEC utiliza para construir la Canasta Básica Total y, a partir de ella, la línea de pobreza. En términos concretos, la inflación que experimenta ese hogar imaginario es la vara con la que se clasifica a pobres y no pobres en Argentina. Una vara que, como veremos, muy pocos hogares reales alcanzan.
-  </p>
-
-  <h3>La definición oficial</h3>
-
-  <p style="text-align: justify;">
-  El INDEC define el hogar de referencia de manera precisa: un varón de 35 años, una mujer de 31, un hijo varón de 9 y una hija mujer de 5. Esta composición no es arbitraria —responde a una estructura de adulto equivalente que permite escalar la canasta a distintos tamaños de hogar— pero sí es específica. Tan específica que vale la pena preguntarse con qué frecuencia aparece en la realidad.
-  </p>
-
-  <p style="text-align: justify;">
-  Para responder esa pregunta utilizamos los microdatos de la Encuesta Permanente de Hogares (EPH) del INDEC, para los 31 aglomerados urbanos relevados entre 2017 y 2025. El punto de partida es simple: ¿cuántos hogares tienen exactamente cuatro miembros?
-  </p>
-
-  <h3 class="figure-title">
-    Figura 1. Distribución de hogares según cantidad de miembros.
-    Promedio 2017–2025, total aglomerados urbanos.
-  </h3>
-  <div class="report-figure">
 ```
 
-```{r g1, echo=FALSE, message=FALSE, warning=FALSE}
-knitr::include_graphics("graficos/g1_tamano_agregado.pdf")
+
+
+### La definición oficial
+
+<h3 class="figure-title">
+Figura 1. Distribución promedio de hogares según cantidad de miembros. Gran Rosario y Gran Santa Fe, 2017-2025
+</h3>
+
+<div class="report-figure">
+
+```{r g1}
+readRDS("graficos/g1.rds")
 ```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+<h3 class="figure-title">
+Figura 2. Participación promedio de hogares de cuatro miembros de acuerdo a la presencia de cónyuge. Argentina, 2017-2025
+</h3>
+
+<div class="report-figure">
+
+```{r g2}
+readRDS("graficos/g2.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+<h3 class="figure-title">
+Figura 3. Participación promedio de hogares de cuatro miembros de acuerdo a la presencia de cónyuge Gran Rosario y Gran Santa Fe, 2017-2025
+</h3>
+
+<div class="report-figure">
+
+```{r g3}
+readRDS("graficos/g3.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+### El embudo de condiciones
+
+<h3 class="figure-title">
+Figura 4. Distribución promedio de edad del jefe de hogar. Argentina, 2017-2025
+</h3>
+
+<div class="report-figure">
+
+```{r g4}
+readRDS("graficos/g4.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+<h3 class="figure-title">
+Figura 5. Distribución promedio de edad del jefe de hogar. Gran Rosario y Gran Santa Fe, 2017-2025
+</h3>
+
+<div class="report-figure">
+
+```{r g5}
+readRDS("graficos/g5.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+<h3 class="figure-title">
+Figura 6. Distribución promedio de hogares biparentales según cantidad de hijos. Argentina, 2017–2025
+</h3>
+
+<div class="report-figure">
+
+```{r g6}
+readRDS("graficos/g6.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+<h3 class="figure-title">
+Figura 7. Distribución promedio de hogares biparentales según cantidad de hijos. Gran Rosario y Gran Santa Fe, 2017–2025
+</h3>
+
+<div class="report-figure">
+
+```{r g7}
+readRDS("graficos/g7.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+<h3 class="figure-title">
+Figura 8. Distribución promedio de edades de los hijos. Argentina, 2017-2025
+</h3>
+
+<div class="report-figure">
+
+```{r g8}
+readRDS("graficos/g8.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+<h3 class="figure-title">
+Figura 9. Distribución promedio de edades de los hijos. Gran Rosario y Gran Santa Fe, 2017-2025
+</h3>
+
+<div class="report-figure">
+
+```{r g9}
+readRDS("graficos/g9.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+<h3 class="figure-title">
+Figura 10. Proporción promedio de hogares que cumplen la condición INDEC, sobre total de hogares. Argentina,  2017-2025
+</h3>
+
+<div class="report-figure">
+
+```{r g10}
+readRDS("graficos/g10.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+<h3 class="figure-title">
+Figura 11. Proporción promedio de hogares que cumplen la condición INDEC, sobre total de hogares. Gran Rosario y Gran Santa Fe, 2017-2025
+</h3>
+
+<div class="report-figure">
+
+```{r g11}
+readRDS("graficos/g11.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+<h3 class="figure-title">
+Figura 12. Evolución temporal de la representatividad. Argentina, 2017-2025
+</h3>
+
+<div class="report-figure">
+
+```{r g12}
+readRDS("graficos/g12.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+<h3 class="figure-title">
+Figura 13. Comparación criterios. Gran Rosario y Gran Santa Fe, 2017-2025
+</h3>
+
+<div class="report-figure">
+
+```{r g13}
+readRDS("graficos/g13.rds")
+```
+
+</div>
+
+<p class="figure-source">
+Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+</p>
+
+### Una reflexión final
+
 
 ```{=html}
-  </div>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: EPH-INDEC. Elaboración propia.
-  </p>
-
-<p style="text-align: justify;">
-  Los hogares de cuatro miembros representan apenas el 18% del total. La mayoría de los hogares argentinos son más pequeños: los unipersonales y bipersonales concentran casi el 45% de los casos. Este dato ya anticipa que el universo de hogares donde podría vivir una familia tipo es, de entrada, minoritario.
-  </p>
-
-  <p style="text-align: justify;">
-  Pero no todos los hogares de cuatro miembros son iguales. Dentro de ese 18%, hay hogares con distintas composiciones: abuelos con nietos, hermanos convivientes, hogares monoparentales. La familia tipo del INDEC supone una estructura muy particular: dos adultos en pareja —jefe y cónyuge— con exactamente dos hijos. ¿Cuántos hogares de cuatro miembros tienen esa estructura biparental?
-  </p>
-
-  <!-- 
-  <h3 class="figure-title">
-    Figura 2. Hogares de 4 miembros según presencia de cónyuge.
-    Promedio 2017–2025, total aglomerados urbanos.
-  </h3>
-  <div class="report-figure">
-
-```
-
-# ```{r g3, echo=FALSE, message=FALSE, warning=FALSE}
-#   knitr::include_graphics("graficos/g3_conyuge_agregado.pdf")
-# ```
- 
-```{=html}</div>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: EPH-INDEC. Elaboración propia.
-  </p>
-  -->
-
-  <p style="text-align: justify;">
-  El 82% de los hogares de cuatro miembros tiene estructura biparental —es decir, jefe y cónyuge presentes. El 18% restante es monoparental. Un punto de partida razonable, pero que se va achicando a medida que sumamos condiciones.
-  </p>
-
-  <h3>El embudo de condiciones</h3>
-
-  <p style="text-align: justify;">
-  La familia tipo del INDEC no solo requiere cuatro miembros y dos adultos en pareja. Requiere además que el jefe sea varón y tenga entre 30 y 40 años, que la cónyuge sea mujer y tenga entre 26 y 36 años, y que los dos hijos tengan edades en rangos específicos: uno entre 7 y 11 años y otro entre 3 y 7. Cada condición adicional reduce el universo.
-  </p>
-
-  <p style="text-align: justify;">
-  Tomando como base los hogares biparentales de cuatro miembros con exactamente dos hijos, el siguiente gráfico muestra cuánto se pierde en cada paso del camino hacia la familia tipo exacta.
-  </p>
-
-  <!-- 
-  <h3 class="figure-title">
-    Figura 3. Distribución de edad del jefe de hogar.
-    Hogares biparentales de 4 miembros con 2 hijos. Promedio 2017–2025.
-  </h3>
-  <div class="report-figure">
-```
-
-# ```{r g5, echo=FALSE, message=FALSE, warning=FALSE}
-#   knitr::include_graphics("graficos/g5_edad_jefe_agregado.pdf")
-# ```
-
-```{=html}
-  </div>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: EPH-INDEC. Elaboración propia.
-  </p>
-
-  <h3 class="figure-title">
-    Figura 4. Distribución de hogares biparentales según cantidad de hijos.
-    Promedio 2017–2025, total aglomerados urbanos.
-  </h3>
-  <div class="report-figure">
-
-```
-
-# ```{r g7, echo=FALSE, message=FALSE, warning=FALSE}
-#   knitr::include_graphics("graficos/g7_hijos_agregado.pdf")
-# ```
-
-```{=html}</div>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: EPH-INDEC. Elaboración propia.
-  </p>
-
-  <h3 class="figure-title">
-    Figura 5. Distribución de edad de los hijos.
-    Hogares biparentales de 4 miembros con 2 hijos. Promedio 2017–2025.
-  </h3>
-  <div class="report-figure">+
-```
-
-# ```{r g9, echo=FALSE, message=FALSE, warning=FALSE}
-#   knitr::include_graphics("graficos/g9_edad_hijos_agregado.pdf")
-# ```
-
-```{=html}
-  </div>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: EPH-INDEC. Elaboración propia.
-  </p>
-  -->
-
-  <h3 class="figure-title">
-    Figura 2. Embudo de condiciones hacia la familia tipo del INDEC.
-    Promedio 2017–2025, total aglomerados urbanos.
-  </h3>
-  <div class="report-figure">
-```
-
-# ```{r g11, echo=FALSE, message=FALSE, warning=FALSE}
-# knitr::include_graphics("graficos/g11_embudo_nacional.pdf")
-# ```
-
-```{=html}
-  </div>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: EPH-INDEC. Elaboración propia.
-  </p>
-
-  <p style="text-align: justify;">
-  El resultado es contundente. De cada 100 hogares biparentales de cuatro miembros con dos hijos, solo 30 tienen al jefe en el rango de edad que asume el INDEC. Al exigir además que sea varón, quedan 22. Al agregar la condición sobre la cónyuge, 14. Y cuando se suman las edades específicas de los hijos, el número cae a menos de 5. En otras palabras, menos del 5% de los hogares que podrían parecerse a la familia tipo efectivamente lo son.
-  </p>
-
-  <h3>¿Cuántas familias tipo existen en Gran Rosario y Gran Santa Fe?</h3>
-
-  <p style="text-align: justify;">
-  Llevando el análisis a los aglomerados de Gran Rosario y Gran Santa Fe —los dos donde Tato Young emite y donde vivimos quienes disparamos esta pregunta— el resultado es similar. El embudo se comporta de manera casi idéntica al promedio nacional, con leves diferencias entre aglomerados.
-  </p>
-
-  <!-- 
-  <h3 class="figure-title">
-    Figura 6. Embudo de condiciones hacia la familia tipo del INDEC.
-    Gran Rosario y Gran Santa Fe. Promedio 2017–2025.
-  </h3>
-  <div class="report-figure">
-
-```
-
-# ```{r g12, echo=FALSE, message=FALSE, warning=FALSE}
-#   knitr::include_graphics("graficos/g12_embudo_sfros.pdf")
-# ```
-
-```{=html}
-  </div>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: EPH-INDEC. Elaboración propia.
-  </p>
-  -->
-
-  <p style="text-align: justify;">
-  Expresado sobre el total de hogares —no solo los de cuatro miembros— la familia tipo del INDEC representa menos del 0,5% de los hogares en ambos aglomerados. Incluso con criterios más laxos —dos adultos de entre 30 y 40 años con dos hijos de cualquier edad— el porcentaje no supera el 3%.
-  </p>
-
-  <!-- 
-  <h3 class="figure-title">
-    Figura 7. Representatividad de la familia tipo según distintos criterios.
-    Gran Rosario y Gran Santa Fe, 2017–2025.
-  </h3>
-  <div class="report-figure">
-
-```
-
-# ```{r g14, echo=FALSE, message=FALSE, warning=FALSE}
-#   knitr::include_graphics("graficos/g14_criterios_sfros.pdf")
-# ```
-
-```{=html}
-  </div>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: EPH-INDEC. Elaboración propia.
-  </p>
-  -->
-
-  <h3>Una reflexión final</h3>
-
-  <p style="text-align: justify;">
-  Nada de esto implica que la metodología del INDEC sea incorrecta. La canasta básica y el adulto equivalente son herramientas técnicas con lógica propia, y la familia tipo es un punto de referencia, no una descripción de la realidad. El problema no es metodológico sino comunicacional: cuando Tato Young —o cualquier periodista, funcionario o analista— dice que "una familia necesita tal monto para no ser pobre", está hablando de un hogar que prácticamente no existe.
-  </p>
-
-  <p style="text-align: justify;">
-  La pobreza se mide con una vara calibrada sobre una familia imaginaria. Eso no invalida la medición, pero sí obliga a ser más cuidadosos con el lenguaje. Decir que "la canasta de referencia del INDEC superó los dos millones" es más preciso que decir que "una familia necesita dos millones". Porque esa familia, en la mayoría de los casos, no existe.
-  </p>
-
-  <div class="report-downloads">
-  </div>
-
 </section>
-  </div>
+</div>
 </article>
 ```
