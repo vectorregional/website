@@ -37,6 +37,9 @@ knitr::opts_chunk$set(
 
 ### La definición oficial
 
+![](graficos/cbt_indec.png)
+Fuente: INDEC (abri de 2026).
+
 <h3 class="figure-title">
 Figura 1. Distribución promedio de hogares según cantidad de miembros. Gran Rosario y Gran Santa Fe, 2017-2025
 </h3>
@@ -50,7 +53,7 @@ readRDS("graficos/g1.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 <h3 class="figure-title">
@@ -66,7 +69,7 @@ readRDS("graficos/g2.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 <h3 class="figure-title">
@@ -82,7 +85,7 @@ readRDS("graficos/g3.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 ### El embudo de condiciones
@@ -100,7 +103,7 @@ readRDS("graficos/g4.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 <h3 class="figure-title">
@@ -116,7 +119,7 @@ readRDS("graficos/g5.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 <h3 class="figure-title">
@@ -132,7 +135,7 @@ readRDS("graficos/g6.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 <h3 class="figure-title">
@@ -148,7 +151,7 @@ readRDS("graficos/g7.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 <h3 class="figure-title">
@@ -164,7 +167,7 @@ readRDS("graficos/g8.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 <h3 class="figure-title">
@@ -180,7 +183,7 @@ readRDS("graficos/g9.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 <h3 class="figure-title">
@@ -196,7 +199,7 @@ readRDS("graficos/g10.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 <h3 class="figure-title">
@@ -212,7 +215,7 @@ readRDS("graficos/g11.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 <h3 class="figure-title">
@@ -228,7 +231,7 @@ readRDS("graficos/g12.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 <h3 class="figure-title">
@@ -244,7 +247,7 @@ readRDS("graficos/g13.rds")
 </div>
 
 <p class="figure-source">
-Fuente: EPH-INDEC. Vector Regional Consultores en base a INDEC.
+Fuente: Vector Regional Consultores en base a INDEC.
 </p>
 
 ### Una reflexión final
