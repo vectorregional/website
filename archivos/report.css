@@ -243,3 +243,55 @@
 .report-figure .svg-container {
   overflow: visible !important;
 }
+
+/* =========================================================
+   FIX Scroll Progress Bar — barra de progreso de lectura
+   ========================================================= */
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 8px;
+  height: 0%;
+
+  background: #0E3E36;
+
+  z-index: 9999;
+
+  transition: height 0.08s linear;
+}
+
+
+/* =========================================================
+   FIGURAS EN FILA
+   ========================================================= */
+
+.figure-row {
+  display: flex;
+  gap: 2rem;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+}
+
+.figure-row img {
+  max-width: 48%;
+  height: auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .figure-row {
+    gap: 1rem;
+  }
+
+  .figure-row img {
+    max-width: 100%;
+  }
+
+}
