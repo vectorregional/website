@@ -270,28 +270,28 @@
 
 .figure-row {
   display: flex;
+  flex-direction: row;
   gap: 2rem;
-
   justify-content: center;
   align-items: flex-start;
-
   flex-wrap: wrap;
 }
 
 .figure-row img {
-  max-width: 48%;
+  flex: 0 0 calc(48% - 1rem);
+  max-width: calc(48% - 1rem);
   height: auto;
+  display: block;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-
   .figure-row {
     gap: 1rem;
   }
 
   .figure-row img {
+    flex: 0 0 100%;
     max-width: 100%;
   }
-
 }

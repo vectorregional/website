@@ -43,8 +43,8 @@ Si bien la pregunta nace debido al espacio geográfico de CABA, decidí llevar e
 ```
 
 
-```{r, echo=FALSE, out.width="70%", fig.align="center"}
-knitr::include_graphics("graficos/cbt_indec.png")
+```{r, echo=FALSE, out.width="70%"}
+knitr::include_graphics("graficos/2026_dis_a/cbt_indec.png")
 ```
 
 
@@ -75,52 +75,16 @@ knitr::include_graphics("graficos/cbt_indec.png")
 <h3 class="figure-title">
   Figura 1. Distribución de hogares biparentales según cantidad de hijos y distribución de hijos según edad del hijo.
 </h3>
-
 <div class="report-figure figure-row">
-```
-
-```{r, echo=FALSE, out.width="100%", fig.align="center"}
-knitr::include_graphics("graficos/g1.png")
-knitr::include_graphics("graficos/g2.png")
-```
-
-```{=html}
+  <img src="graficos/2026_dis_a/g1.png">
+  <img src="graficos/2026_dis_a/g2.png">
 </div>
-
 <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
   Fuente: elaboración propia en base a EPH-INDEC.
 </p>
 ```
 
-
-
 ```{=html}
-  <h3 class="figure-title">
-    Figura 1. Distribución de hogares biparentales según cantidad de hijos y distribución de hijos según edad del hijo.
-  </h3>
-  <div class="report-figure">
-```
-
-```{r, echo=FALSE, message=FALSE, fig.width=12, fig.height=5, warning=FALSE}
-library(patchwork)
-# g1: % hogares biparentales por cantidad de hijos
-# g2: % total de hijos por edad del hijo
-knitr::include_graphics("graficos/g1.png")
-```
-
-
-```{r, echo=FALSE, message=FALSE, fig.width=12, fig.height=5}
-# g1: % hogares biparentales por cantidad de hijos
-# g2: % total de hijos por edad del hijo
-knitr::include_graphics("graficos/g2.png")
-```
-
-```{=html}
-  </div>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: elaboración propia en base a EPH-INDEC.
-  </p>
-
   <p style="text-align: justify;">
   Empecemos por el principio. La familia tipo supone, antes que nada, que hay dos adultos en el hogar. Eso ya deja afuera a casi la mitad del país: según los datos de la EPH, apenas el <strong>56,6% de los hogares son biparentales</strong>. El resto —hogares unipersonales, monoparentales, convivencias sin pareja— queda fuera desde la primera condición. Y entre los hogares biparentales, la distribución por cantidad de hijos es más pareja de lo que uno imaginaría: casi el 30% no tiene hijos, el 25% tiene uno, cerca del 28% tiene dos —que es el valor de la familia tipo— y el resto tiene tres o más.
   </p>
@@ -136,7 +100,7 @@ knitr::include_graphics("graficos/g2.png")
 
 ```{r, echo=FALSE, message=FALSE, fig.width=10, fig.height=5}
 # g3: embudo de filtros desde todos los hogares hasta hogar tipo INDEC
-knitr::include_graphics("graficos/g3.png")
+knitr::include_graphics("graficos/2026_dis_a/g3.png")
 
 ```
 
@@ -158,7 +122,7 @@ knitr::include_graphics("graficos/g3.png")
 
 ```{r, echo=FALSE, message=FALSE, fig.width=10, fig.height=5}
 # g4: filtros dentro de biparentales con 2 hijos
-knitr::include_graphics("graficos/g4.png")
+knitr::include_graphics("graficos/2026_dis_a/g4.png")
 ```
 
 ```{=html}
@@ -180,8 +144,8 @@ knitr::include_graphics("graficos/g4.png")
 ```{r, echo=FALSE, message=FALSE, fig.width=12, fig.height=5}
 # g5: distribución por cantidad de miembros
 # g6: serie temporal de hogares de 4 miembros
-knitr::include_graphics("graficos/g5.png")
-knitr::include_graphics("graficos/g6.png")
+knitr::include_graphics("graficos/2026_dis_a/g5.png")
+knitr::include_graphics("graficos/2026_dis_a/g6.png")
 ```
 
 ```{=html}
@@ -203,8 +167,8 @@ knitr::include_graphics("graficos/g6.png")
 ```{r, echo=FALSE, message=FALSE, fig.width=12, fig.height=5}
 # g7: con/sin cónyuge en hogares de 4 miembros
 # g8: distribución de edad del progenitor por tipo de hogar
-knitr::include_graphics("graficos/g7.png")
-knitr::include_graphics("graficos/g8.png")
+knitr::include_graphics("graficos/2026_dis_a/g7.png")
+knitr::include_graphics("graficos/2026_dis_a/g8.png")
 ```
 
 ```{=html}
