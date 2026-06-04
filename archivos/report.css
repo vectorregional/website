@@ -295,3 +295,8 @@
   }
 
 }
+
+.report-body strong {
+  color: #0E3E36; /* verde principal institucional */
+  font-weight: 700;
+}

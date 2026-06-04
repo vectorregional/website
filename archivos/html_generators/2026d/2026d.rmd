@@ -1,0 +1,70 @@
+---
+title: "Mercado de trabajo: más informalidad y menor estabilidad laboral"
+description: "Análisis de las transiciones laborales en Argentina entre 2023 y 2025. Crecen las salidas del empleo formal hacia la informalidad, la desocupación y la inactividad."
+keywords: "mercado de trabajo, informalidad, empleo formal, desempleo, transiciones laborales, EPH, Argentina"
+output:
+  html_document:
+    self_contained: false
+    theme: null
+    highlight: null
+    template: !expr here::here("archivos", "report_template.html")
+---
+
+```{=html}
+<article class="report">
+  <div class="report-container">
+
+<header class="report-header">
+  <p class="report-kicker">Mercado de trabajo · Empleo e informalidad</p>
+  <h1>Más informalidad y menor estabilidad</h1>
+  <p class="report-date">Junio 2026</p>
+</header>
+
+<section class="report-body">
+
+<p style="text-align: justify;">
+
+La recuperación de la actividad económica observada durante 2025 <strong>no se tradujo en una mejora equivalente del mercado laboral</strong>. Mientras algunos indicadores productivos comenzaron a mostrar señales de recuperación, persistieron las <strong>dificultades para generar empleo registrado y mejorar las condiciones de inserción de los trabajadores</strong>.
+
+En este informe analizamos cómo cambiaron las trayectorias laborales de los argentinos durante los primeros dos años de la actual gestión nacional. A partir de información de panel de la Encuesta Permanente de Hogares (EPH), se reconstruyen los movimientos de las personas entre <strong>empleo formal</strong>, <strong>empleo informal</strong>, <strong>cuentapropismo</strong>, <strong>desocupación</strong> e <strong>inactividad</strong>, entre otras situaciones laborales.
+
+</p>
+
+<h3 class="figure-title">
+Figura 1. Actividad económica y empleo privado registrado, Argentina, 2012-2026*<br>
+Series desestacionalizadas (Base 100 = nov-23)
+</h3>
+
+<div id="grafico-formal" class="report-figure">
+```
+
+```{r, echo = F, message = F}
+plotly_obj <- readRDS("grafico/plotly.rds")
+plotly_obj
+```
+
+```{=html}
+ </div>
+
+<p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
+Fuente: Vector Regional en base a EPH-INDEC.
+</p>
+
+<p style="text-align: justify;">
+
+El análisis revela una <strong>menor estabilidad del empleo asalariado formal</strong>, una <strong>mayor persistencia de la informalidad</strong> y un aumento de las transiciones hacia la <strong>desocupación</strong> y la <strong>inactividad</strong>. En otras palabras, aun cuando algunos indicadores económicos comenzaron a recuperarse, las oportunidades de acceder y permanecer en empleos de calidad se redujeron.
+
+Además de cuantificar estos cambios, el informe identifica cuáles fueron los principales destinos de los trabajadores que abandonaron empleos formales y cómo se modificaron las probabilidades de movilidad laboral respecto del primer año de gobierno.
+
+</p>
+
+<div class="report-downloads">
+  <a href="folder/main_2026d.pdf" class="download-link primary" download>
+    Descargar informe completo
+  </a>
+</div>
+
+</section>
+  </div>
+</article>
+```
