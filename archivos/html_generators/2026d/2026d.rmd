@@ -16,7 +16,7 @@ output:
 
 <header class="report-header">
   <p class="report-kicker">Mercado de trabajo · Empleo e informalidad</p>
-  <h1>Más informalidad y menor estabilidad</h1>
+  <h1>¿Por qué el crecimiento <br> no genera trabajo asalariado?</h1>
   <p class="report-date">Junio 2026</p>
 </header>
 
