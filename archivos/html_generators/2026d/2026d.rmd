@@ -47,7 +47,7 @@ plotly_obj
  </div>
 
 <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-Fuente: Vector Regional en base a EPH-INDEC.
+Fuente: Vector Regional en base a SIPA e INDEC.
 </p>
 
 <p style="text-align: justify;">
