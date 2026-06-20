@@ -141,6 +141,24 @@ $head$
   <!-- Main JS -->
   <script src="../assets/js/main.js"></script>
 
+    <!-- Lightbox para imágenes de reportes (no afecta otras páginas) -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".report-figure img").forEach(function (img) {
+      if (!img.closest("a.glightbox")) {
+        var link = document.createElement("a");
+        link.href = img.getAttribute("src");
+        link.classList.add("glightbox");
+        img.parentNode.insertBefore(link, img);
+        link.appendChild(img);
+      }
+    });
+
+    if (typeof GLightbox === "function") {
+      GLightbox({ selector: ".glightbox" });
+    }
+  });
+  </script>
 
 </footer>
 
