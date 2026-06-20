@@ -18,179 +18,268 @@ output:
 <div id="scroll-progress"></div>
   <div class="report-container">
 <header class="report-header">
-  <p class="report-kicker">Estadística · Sociedad · Consumo</p>
+  <p class="report-kicker">Estadística · Sociedad · Consumo · Pobreza</p>
   <h1>¿Cuán representativa es la <br> familia tipo del INDEC?</h1>
-  <p class="report-date">Mayo 2026</p>
+  <p class="report-date">Julio 2026</p>
 </header>
 <section class="report-body">
+
+<p style="text-align: justify;">
+
+La caída de la tasa de natalidad es uno de los fenómenos demográficos más comentados de los últimos años en Argentina —y en buena parte del mundo—. Menos nacimientos significa, entre otras cosas, hogares más chicos, estructuras familiares distintas a las de generaciones anteriores y, como consecuencia, un cambio en cómo deberíamos pensar las mediciones de pobreza que parten de una "familia tipo" fija. ¿Sigue teniendo sentido hablar de un hogar de cuatro integrantes, con dos hijos en edad escolar, como la unidad de referencia?
+
+  </p>
+
   <p style="text-align: justify;">
 
-No se si les sucede lo mismo a ustedes, a menudo me hallo en piloto automático rodeado de información, reduciendo los espacios de escucha activa a momentos en los que ciertamente lo estoy decidiendo. No obstante, existen momentos en los cuales, dentro de mi piloto automático, escucho una frase, un número, o quizá una pequeña inflexión en el tono de una de las sílabas de una palabra y toda la información que hasta el momento era ruido, se convierte en información como acivo. En ese momento, es como si hubiese prestado atención a cada palabra que escuche y se me generan un montón de ideas.
+La semana pasada había salido el dato de inflación de la Ciudad de Buenos Aires (CABA) y el periodista lo estaba comentando. En verdad, se escuchaba algo como lo siguiente:
+
   </p>
-  
+
+<blockquote style="margin-left: 40px; margin-right: 40px; text-align: justify; font-style: italic;">
+<p>
+
+"la inflación de la ciudad de Buenos Aires trepó al 2,6%. Como consecuencia (...) Transporte, comunicación y cuidado personal como mayores incrementos (...) Así, un hogar tipo, con dos adultos de 35 años de edad junto con dos hijos de 9 y 6 años necesitó $ 1.500.000 para no ser considerado pobre y $ 800.000 a su vez para no ser considerado indigente" (cifras aproximadas).
+
+</p>
+</blockquote>
+
   <p style="text-align: justify;">
-Esto me sucedeió la semana pasada, en un programa radial de una importante emisora. Había salido el dato de inflación de la Ciudad de Buenos Aires (CABA) y el periodista lo estaba comentando. En verdad, se escuchaba algo como lo siguiente: "la inflación de la ciudad de Buenos Aires trepó al 2,6%, significando que (...) con los rubros transporte, comunicación y cuidado personal como mayores (...) Así, un hogar tipo, con dos adultos de 35 años de edad junto con dos hijos de 9 y 6 años necesitó $ 1.500.000 para no ser considerado pobre y $ 800.000 a su vez para no ser considerado indigente" (cifras aproximadas). En el momento en que escuché la "hogar tipo", todo lo que comentó en la columna se me hizo presente.
- </p>
- 
-  <p style="text-align: justify;">
-Si bien la pregunta nace debido al espacio geográfico de CABA, decidí llevar este razonamiento a nivel nacional. Por tal motivo, adjunto a continuación como se componen los hogares tipos a nivel nacional al momento de construir canastas de consumo y, en consecuencia, determinar cuánto necesita un hogar para ser considerado pobre/indigente.
+
+Ese hogar que aparece de manera recurrente en informes oficiales, titulares periodísticos y debates televisivos, ¿existe realmente en la Argentina actual? Y si no existe —lo cierto es que estas construcciones estadísticas intentan aproximarse a la realidad—, ¿cuántos hogares argentinos se parecen a esa descripción? En otras palabras, ¿cuán "tipo" es verdaderamente una familia tipo?
+Si bien la pregunta nace debido al espacio geográfico de CABA, decidimos llevar este razonamiento a nivel nacional. Por tal motivo, adjunto a continuación cómo se componen los hogares tipo a nivel nacional al momento de construir canastas de consumo y, en consecuencia, determinar cuánto necesita un hogar para ser considerado pobre o indigente.
+
   </p>
-  
+
   <h3 class="figure-title">
-    Figura 1. Canasta Básica Total (CBT) y Alimentaria (CBA) de tres hogares tipo a nivel nacional
+    Figura 1. Canasta Básica Total (CBT) y Alimentaria (CBA) de tres hogares tipo a nivel nacional para precios de mayo de 2026
   </h3>
   <div id="canastas-indec" class="report-figure">
 ```
 
 
-```{r, echo=FALSE, out.width="70%"}
-knitr::include_graphics("graficos/2026_dis_a/cbt_indec.png")
+```{r, echo=FALSE}
+knitr::include_graphics("graficos/2026_dis_a/cbt_indec.png") # , out.width="70%"
 ```
 
 
 ```{=html}
  </div>
   <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: Fuente: INDEC (abril de 2026).
+    Fuente: INDEC (junio de 2026).
   </p>
-  
-<p style="text-align: justify;">
-  A partir de visualizar estas composiciones, y entendiendo además ciertos rasgos del presente —la creciente priorización de la carrera profesional, la postergación de la maternidad y la paternidad, el deterioro de los vínculos interpersonales presenciales y, como consecuencia de todo ello, la caída sostenida de la natalidad—, la pregunta se me hizo muy evidente. Ese hogar que aparece de manera recurrente en informes oficiales, titulares periodísticos y debates televisivos, ¿existe realmente en la Argentina actual? ¿Cuántos hogares argentinos se parecen, aunque sea parcialmente, a esa descripción? En otras palabras, ¿cuán “tipo” es verdaderamente una familia tipo?
-</p>
 
 <p style="text-align: justify;">
-  Esa, en rigor, es la pregunta que intentamos responder a continuación.
+
+De acuerdo con la última estimación de las canastas, el hogar de tres integrantes debió tener un ingreso de $ 1.498.741 para no ser considerado "hogar pobre", y de $ 681.246 para no ser considerado "hogar indigente". Dejando de lado el análisis de ingresos para otra ocasión, en este caso interesa saber cuán probable —a partir de participaciones del período de análisis— es encontrar un hogar cuyos integrantes sean un hombre de 35 años, una mujer de 31 años, un hijo de 6 años y una hija de 8 años —independientemente de los parentescos—. Asimismo, del análisis es posible inferir los otros dos casos.
+
 </p>
-```
 
+<h3 class="section-subtitle">Cómo leer los resultados</h3>
 
-```{=html}
+<p style="text-align: justify;">
 
-  <p style="text-align: justify;">
-  Me hice esa pregunta mirando datos de la Encuesta Permanente de Hogares, y lo que encontré me resultó más elocuente que cualquier nota de tapa: una familia tipo representa menos del 1% de los hogares a nivel nacional.
-  </p>
-```
+Los resultados se desprenden de analizar la Encuesta Permanente de Hogares (EPH). La encuesta se realiza de manera trimestral en distintos aglomerados urbanos a lo largo del país (32 para ser exactos), cubriendo en promedio alrededor de 9,6 millones de hogares urbanos por trimestre. Cabe destacar que la EPH no releva hogares rurales ni localidades pequeñas; sus resultados son representativos de la población urbana de Argentina, que concentra aproximadamente el 90% de la población total del país.
 
-```{=html}
-<h3 class="figure-title">
-  Figura 1. Distribución de hogares biparentales según cantidad de hijos y distribución de hijos según edad del hijo.
-</h3>
-<div class="report-figure figure-row">
-  <img src="graficos/2026_dis_a/g1.png">
-  <img src="graficos/2026_dis_a/g2.png">
-</div>
-<p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-  Fuente: elaboración propia en base a EPH-INDEC.
+A lo largo del período analizado —del trimestre I de 2017 al trimestre IV de 2025, es decir, 36 trimestres— se relevaron en total 610.581 hogares en muestra, con un promedio de aproximadamente 16.961 hogares por trimestre. Las cifras que se observan a continuación son promedios del período, salvo mención contraria. A pesar de ello, se constató que los mismos son representativos de todo el período, es decir, son cifras estables.
+
+Una advertencia metodológica adicional resulta pertinente. La EPH fue concebida para realizar inferencias sobre grandes grupos poblacionales y no para identificar hogares que cumplan simultáneamente una larga lista de características muy específicas. En consecuencia, a medida que se incorporan nuevas condiciones —como sexo, edad de los adultos, cantidad de hijos y edad de estos últimos— la proporción de hogares que satisface todos los criterios disminuye rápidamente. Por ello, el objetivo del presente ejercicio no es estimar cuántos hogares reproducen exactamente la composición de la familia tipo utilizada por el INDEC, sino analizar cuán frecuentes son, por separado, los distintos atributos que la caracterizan y evaluar hasta qué punto estos reflejan la estructura demográfica observada en los hogares urbanos argentinos.
+
 </p>
-```
 
-```{=html}
-  <p style="text-align: justify;">
-  Empecemos por el principio. La familia tipo supone, antes que nada, que hay dos adultos en el hogar. Eso ya deja afuera a casi la mitad del país: según los datos de la EPH, apenas el <strong>56,6% de los hogares son biparentales</strong>. El resto —hogares unipersonales, monoparentales, convivencias sin pareja— queda fuera desde la primera condición. Y entre los hogares biparentales, la distribución por cantidad de hijos es más pareja de lo que uno imaginaría: casi el 30% no tiene hijos, el 25% tiene uno, cerca del 28% tiene dos —que es el valor de la familia tipo— y el resto tiene tres o más.
-  </p>
-  <p style="text-align: justify;">
-  La edad de los hijos tampoco concentra el peso donde uno esperaría. El pico de representación está entre los 8 y los 12 años —justo donde la familia tipo los ubica—, pero la distribución es bastante plana entre los 5 y los 17 años. Los hijos en edad escolar no son una rareza, pero tampoco dominan de manera abrumadora el panorama.
-  </p>
+<h2 class="section-title">En búsqueda del hogar tipo</h2>
+
+<h3 class="section-subtitle">¿Cuántos hogares tienen dos adultos de distinto sexo?</h3>
+
+<p style="text-align: justify;">
+
+Una de las características centrales de la familia tipo es que el hogar lo integran un hombre y una mujer, ambos adultos. Definimos como "adulto" a cualquier miembro del hogar que no sea hijo o hijastro del jefe, independientemente de su edad. Bajo este criterio, el 52,2% de los hogares urbanos argentinos cuenta con exactamente un hombre y una mujer, ambos adultos. Esto significa que casi la mitad de los hogares sobre los que versan las canastas quedan fuera de la caracterización desde el primer paso.
+
+</p>
 
   <h3 class="figure-title">
-    Figura 2. El embudo hacia la familia tipo: participación en el total de hogares según criterios acumulados.
+    Figura 2. Hogares con dos adultos de distinto sexo vs. resto, promedio 2017-2025
   </h3>
-  <div class="report-figure">
+  <div id="adultos-distinto-sexo" class="report-figure">
 ```
 
-```{r, echo=FALSE, message=FALSE, fig.width=10, fig.height=5}
-# g3: embudo de filtros desde todos los hogares hasta hogar tipo INDEC
-knitr::include_graphics("graficos/2026_dis_a/g3.png")
 
+```{r, echo=FALSE, out.width="70%"}
+knitr::include_graphics("graficos/2026_dis_a/g1.png") # , out.width="70%"
 ```
+
 
 ```{=html}
-  </div>
+ </div>
   <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
     Fuente: elaboración propia en base a EPH-INDEC.
   </p>
 
-  <p style="text-align: justify;">
-  El gráfico anterior lo muestra con claridad. Cada condición que agrega la metodología —biparental, con dos hijos, con edades de los progenitores en cierto rango, con hijos en edad escolar— recorta el universo de manera significativa. El resultado final es casi conmovedor en su especificidad: solo el <strong>0,6% de todos los hogares argentinos</strong> cumple con todas las condiciones que define la metodología. Dicho de otro modo: el hogar de referencia con el que medimos el bienestar de los argentinos coincide exactamente con menos de uno de cada ciento cincuenta hogares reales.
-  </p>
+<h3 class="section-subtitle">¿Cuántos hijos tienen estos hogares?</h3>
+
+<p style="text-align: justify;">
+
+Ahora bien, sin importar la cantidad de adultos que haya en el hogar, la distribución de hijos es la siguiente: el 40,3% de los hogares no tiene hijos, el 23,5% tiene uno, el 21,8% tiene dos, el 9,4% tiene tres y el 5,1% tiene cuatro o más. Como se ha dicho, la familia tipo supone exactamente dos hijos, lo que equivale a poco más de uno de cada cinco hogares del total.
+
+</p>
 
   <h3 class="figure-title">
-    Figura 3. Perfil de los hogares biparentales con 2 hijos: participación según criterios adicionales.
+    Figura 3. Distribución de hogares según cantidad de hijos, promedio 2017-2025
   </h3>
-  <div class="report-figure">
+  <div id="cantidad-hijos" class="report-figure">
 ```
 
-```{r, echo=FALSE, message=FALSE, fig.width=10, fig.height=5}
-# g4: filtros dentro de biparentales con 2 hijos
+
+```{r, echo=FALSE}
+knitr::include_graphics("graficos/2026_dis_a/g2.png") # , out.width="70%"}
+```
+
+
+```{=html}
+ </div>
+  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
+    Fuente: elaboración propia en base a EPH-INDEC.
+  </p>
+
+<h3 class="section-subtitle">¿Qué edad tienen los hijos?</h3>
+
+<p style="text-align: justify;">
+
+En el caso de las edades, se ha relajado la especificación para contemplar un entorno sobre los valores que sugiere el INDEC. En este sentido, sobre el total de hijos en hogares biparentales, la distribución de edades en entorno de entre 3 y 7 años para uno de los hijos, y entre 7 y 11 años para la hija, capturan una porción acotada de la distribución real. La gran mayoría de los hijos se distribuye de manera bastante uniforme entre 0 y 20 años, sin una concentración marcada en ningún rango particular.
+
+</p>
+
+  <h3 class="figure-title">
+    Figura 4. Distribución de edad de los hijos en hogares biparentales, promedio 2017-2025
+  </h3>
+  <div id="edad-hijos" class="report-figure">
+```
+
+
+```{r, echo=FALSE}
+knitr::include_graphics("graficos/2026_dis_a/g3.png")
+```
+
+
+```{=html}
+ </div>
+  <p style="font-size: 0.8rem; color: #666; margin-top: -0.1rem;">
+    Nota: Se limitó la muestra a hijos menores a 30 años para evitar distorsiones ocasionadas por hogares en los que se encuentran hijos mayores.
+  </p>
+  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
+    Fuente: elaboración propia en base a EPH-INDEC.
+  </p>
+
+<h3 class="section-subtitle">¿Qué edad tienen los jefes de hogar?</h3>
+
+<p style="text-align: justify;">
+
+La familia tipo asume que el jefe varón tiene 35 años y la jefa mujer 31 años. Sin embargo, los datos de la EPH muestran que solo el 21,8% de los jefes varones se encuentra en el rango de 30 a 40 años, y apenas el 17,5% de las jefas mujeres tiene entre 26 y 36 años. Dicho de otro modo, menos de uno de cada cuatro jefes varones y menos de uno de cada cinco jefas mujeres caen en el rango etario que presuponen las canastas oficiales.
+
+</p>
+
+  <h3 class="figure-title">
+    Figura 5. Distribución de edad del jefe varón, promedio 2017-2025
+  </h3>
+  <div id="edad-jefe-varon" class="report-figure">
+```
+
+
+```{r, echo=FALSE}
 knitr::include_graphics("graficos/2026_dis_a/g4.png")
 ```
 
+
 ```{=html}
-  </div>
+ </div>
   <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
     Fuente: elaboración propia en base a EPH-INDEC.
   </p>
 
-  <p style="text-align: justify;">
-  Incluso si tomamos solo el subconjunto de hogares biparentales con dos hijos —que ya representa apenas el 13,9% del total—, la restricción de las edades de los progenitores deja al 21,6% con un varón entre 30 y 40 años y al 13,5% con una mujer entre 26 y 36 años. Sumar además la condición de que los hijos estén en edades similares a las del modelo INDEC lleva ese número al <strong>4,6%</strong>. La especificidad del modelo no es un defecto metodológico; es una elección. Pero conviene saber cuántos hogares reales representa.
-  </p>
-
   <h3 class="figure-title">
-    Figura 4. Distribución de hogares según cantidad de miembros y participación de hogares de 4 miembros en el tiempo.
+    Figura 6. Distribución de edad de la jefa mujer, promedio 2017-2025
   </h3>
-  <div class="report-figure">
+  <div id="edad-jefa-mujer" class="report-figure">
 ```
 
-```{r, echo=FALSE, message=FALSE, fig.width=12, fig.height=5}
-# g5: distribución por cantidad de miembros
-# g6: serie temporal de hogares de 4 miembros
+
+```{r, echo=FALSE}
 knitr::include_graphics("graficos/2026_dis_a/g5.png")
+```
+
+
+```{=html}
+ </div>
+  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
+    Fuente: elaboración propia en base a EPH-INDEC.
+  </p>
+
+<h3 class="section-subtitle">¿Cuántos hogares tienen exactamente un adulto varón o una adulta mujer?</h3>
+
+<p style="text-align: justify;">
+
+Vale la pena observar estas dimensiones de manera individual. El 68,3% de los hogares tiene exactamente un adulto hombre, mientras que el 77,3% tiene exactamente una adulta mujer. Estas cifras, tomadas por separado, podrían sugerir que la familia tipo es frecuente. Sin embargo, la coincidencia simultánea de ambas condiciones —junto con la cantidad y edades de los hijos— es lo que reduce drásticamente la representatividad, tal como se vio en preguntas previas.
+
+</p>
+
+<h3 class="figure-title">
+  Figura 7. Hogares con exactamente un adulto (A) y una mujer (B) promedio 2017-2025
+</h3>
+<div id="figura-7" class="report-figure" style="display: flex; gap: 16px; justify-content: center;">
+  <div style="flex: 1;">
+```
+
+```{r, echo=FALSE}
 knitr::include_graphics("graficos/2026_dis_a/g6.png")
 ```
 
 ```{=html}
-  </div>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: elaboración propia en base a EPH-INDEC.
-  </p>
 
-  <p style="text-align: justify;">
-  Los hogares de cuatro miembros representan alrededor del <strong>18-19% del total</strong>, con una variación trimestral estable a lo largo de los últimos años —con algunos picos en 2020 y 2021 asociados a los cambios en la convivencia durante la pandemia—. Eso significa que la estructura de cuatro integrantes es una entre varias opciones posibles: hay casi tantos hogares de dos personas como de cuatro, y los unipersonales no se quedan muy atrás.
-  </p>
+</div>
+  <div style="flex: 1;">
 
-  <h3 class="figure-title">
-    Figura 5. Presencia de cónyuge en hogares de 4 miembros y distribución por edad del progenitor según tipo de hogar.
-  </h3>
-  <div class="report-figure">
 ```
 
-```{r, echo=FALSE, message=FALSE, fig.width=12, fig.height=5}
-# g7: con/sin cónyuge en hogares de 4 miembros
-# g8: distribución de edad del progenitor por tipo de hogar
+```{r, echo=FALSE}
 knitr::include_graphics("graficos/2026_dis_a/g7.png")
-knitr::include_graphics("graficos/2026_dis_a/g8.png")
 ```
 
 ```{=html}
   </div>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: elaboración propia en base a EPH-INDEC.
-  </p>
+</div>
+<p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
+  Fuente: elaboración propia en base a EPH-INDEC.
+</p>
 
-  <p style="text-align: justify;">
-  Entre los hogares de cuatro integrantes, la gran mayoría incluye una pareja: el 82% tiene cónyuge presente. La distribución etaria de los progenitores muestra que, en hogares biparentales, el <strong>31,7% de los progenitores tiene menos de 35 años</strong> —el umbral que usa el INDEC para el varón de referencia—. En hogares monoparentales del mismo tamaño, esa proporción cae al 21,1%.
-  </p>
-  <p style="text-align: justify;">
-  
-  Está claro que las medicioens promedio y niveles general buscan justamente representar una foto promedio de la situación. Sin embago, Por supuesto que 
-  
-  
-  
-  ¿Qué concluyo de todo esto? No creo que la familia tipo sea un invento malicioso ni una negligencia estadística. Tiene una lógica: sirve para comparar el poder adquisitivo a lo largo del tiempo con un patrón fijo. El problema no es el dato en sí; el problema es cómo lo usamos. Cuando un sindicato dice que "una familia tipo necesita tantos pesos para vivir", está usando una abstracción demográfica como si fuera la experiencia vivida de la mayoría. Y no lo es. La mayoría de los hogares argentinos son más pequeños, más heterogéneos, más solos de lo que ese modelo sugiere.
-  </p>
-  <p style="text-align: justify;">
-  No digo que el INDEC deba publicar cuarenta canastas distintas. Digo que cuando periodistas, políticos y analistas citan "la familia tipo" deberían aclarar que están hablando de un artefacto metodológico que describe a menos de uno de cada ciento cincuenta hogares. No porque sea un dato falso, sino porque la distancia entre el modelo y la realidad es parte de la información.
-  </p>
+<p style="text-align: justify;">
+
+Entre los hogares de cuatro integrantes, la gran mayoría incluye una pareja: el 82% tiene cónyuge presente. La distribución etaria de los progenitores muestra que, en hogares biparentales, el <strong>31,7% de los progenitores tiene menos de 35 años</strong> —el umbral que usa el INDEC para el varón de referencia—. En hogares monoparentales del mismo tamaño, esa proporción cae al 21,1%.
+
+</p>
+
+<h2 class="section-title">Hacia nuevas canastas de consumo</h2>
+
+<p style="text-align: justify;">
+
+La familia tipo cumple una función estadística concreta: constituye una unidad de referencia que permite seguir la evolución del costo de vida y comunicar de manera sencilla los umbrales de pobreza e indigencia. En ese sentido, su utilidad no depende necesariamente de que represente al hogar más frecuente del país. Sin embargo, la pregunta sobre cuán cercana se encuentra esa referencia de la realidad cotidiana de los hogares argentinos sigue siendo relevante.
+
+Los resultados sugieren que varias de las características que definen a la familia tipo poseen una presencia limitada cuando se las compara con la composición actual de los hogares urbanos. Si bien cada atributo por separado puede resultar relativamente frecuente, la evidencia apunta a que la configuración utilizada como referencia oficial no coincide necesariamente con las estructuras familiares más habituales en la actualidad.
+
+Esta distancia entre la referencia estadística y la estructura demográfica efectiva de los hogares adquiere especial relevancia en un contexto de cambios demográficos sostenidos. El aumento de los hogares unipersonales, la menor cantidad de hijos por hogar y el envejecimiento de la población han modificado la composición familiar respecto de aquella que inspiró originalmente la noción de familia tipo.
+
+Lo anterior no implica que las canastas actuales deban abandonarse. Por el contrario, su continuidad favorece la comparabilidad histórica de los indicadores. No obstante, los resultados sugieren que podría ser útil complementar las mediciones tradicionales con un conjunto más amplio de hogares de referencia. Incorporar canastas para hogares unipersonales, parejas sin hijos, hogares monoparentales o familias con un único hijo permitiría describir de manera más precisa la diversidad de situaciones que caracterizan hoy a la sociedad argentina.
+
+</p>
+
+<p style="text-align: justify;">
+
+¿Qué concluyo de todo esto? No creo que la familia tipo sea un invento malicioso ni una negligencia estadística. Tiene una lógica: sirve para comparar el poder adquisitivo a lo largo del tiempo con un patrón fijo. El problema no es el dato en sí; el problema es cómo lo usamos. Cuando un sindicato dice que "una familia tipo necesita tantos pesos para vivir", está usando una abstracción demográfica como si fuera la experiencia vivida de la mayoría. Y no lo es. La mayoría de los hogares argentinos son más pequeños, más heterogéneos, más solos de lo que ese modelo sugiere.
+
+No digo que el INDEC deba publicar cuarenta canastas distintas. Digo que cuando periodistas, políticos y analistas citan "la familia tipo" deberían aclarar que están hablando de un artefacto metodológico que describe a una porción acotada de los hogares argentinos. No porque sea un dato falso, sino porque la distancia entre el modelo y la realidad es parte de la información.
+
+En definitiva, estos resultados también son un síntoma más de cómo viene cambiando la composición de los hogares argentinos, en línea con la caída sostenida de la natalidad. La familia tipo continúa siendo una herramienta útil para el análisis económico y social, pero su valor radica más en su función como referencia estadística que en su capacidad para representar al hogar argentino contemporáneo. En una sociedad cada vez más diversa en términos de arreglos familiares y ciclos de vida, complementar esa referencia con nuevas canastas permitiría enriquecer el diagnóstico social sin resignar la comparabilidad histórica de los indicadores.
+
+</p>
 
 </section>
   </div>
