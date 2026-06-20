@@ -200,6 +200,14 @@
   margin: 1.5rem auto;
 }
 
+/* Centra imágenes estáticas (PNG/JPG) dentro del contenedor de figura */
+.report-figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 /* Forzar que plotly respete el contenedor */
 .report-figure .html-widget,
 .report-figure .svg-container {
@@ -300,3 +308,4 @@
   color: #0E3E36; /* verde principal institucional */
   font-weight: 700;
 }
+
