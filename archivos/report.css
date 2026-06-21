@@ -92,15 +92,29 @@
 }
 
 
-/* ===== Subtítulos (si los usás luego) ===== */
+/* ===== Subtítulos de sección (h2 y h3) ===== */
 .report-body h2 {
   font-size: 1.6rem;
   font-weight: 600;
 
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+
+    padding: 0;          /* 👈 anula el padding heredado del template */
 
   color: #0E3E36;
+
+  text-align: left;
+}
+
+.report-body h3.section-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+
+  color: #4D8A62;
 
   text-align: left;
 }
@@ -352,3 +366,66 @@
   font-weight: 700;
 }
 
+
+/* ===== Nota metodológica (al final del informe) ===== */
+
+.note-divider {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 3rem 0 2rem;
+}
+
+.methodology-note {
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  scroll-margin-top: 100px; /* para que el header sticky no tape al saltar */
+}
+
+.methodology-note h3 {
+  color: #6c757d;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.methodology-note p {
+  color: #6c757d;
+  margin-bottom: 1.2rem;
+}
+
+.note-link {
+  color: #6c757d;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  scroll-margin-top: 100px;
+}
+
+.note-link:hover,
+.note-link:active,
+.note-link:focus {
+  background-color: #0E3E36;
+  color: #ffffff;
+  text-decoration: none; /* el fondo ya marca el resaltado, el subrayado sobra */
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #4D8A62;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Scroll suave al saltar entre anclas */
+html {
+  scroll-behavior: smooth;
+}
