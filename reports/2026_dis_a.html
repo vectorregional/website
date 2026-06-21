@@ -171,7 +171,7 @@ canasta básica, a partir de datos de la EPH.">
       Figura 3. Distribución de hogares según cantidad de hijos, promedio 2017-2025
     </h3>
     <div id="cantidad-hijos" class="report-figure">
-  <p><img src="graficos/2026_dis_a/g2.png" alt="" width="900" /></p>
+  <p><img src="graficos/2026_dis_a/g2.png" alt="" width="70%" /></p>
    </div>
     <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
       Fuente: elaboración propia en base a EPH-INDEC.
@@ -189,7 +189,7 @@ canasta básica, a partir de datos de la EPH.">
       Figura 4. Distribución de edad de los hijos en hogares biparentales, promedio 2017-2025
     </h3>
     <div id="edad-hijos" class="report-figure">
-  <p><img src="graficos/2026_dis_a/g3.png" alt="" width="900" /></p>
+  <p><img src="graficos/2026_dis_a/g3.png" alt="" width="70%" /></p>
    </div>
     <p style="font-size: 0.8rem; color: #666; margin-top: -0.1rem;">
       Nota: Se limitó la muestra a hijos menores a 30 años para evitar distorsiones ocasionadas por hogares en los que se encuentran hijos mayores.
@@ -210,7 +210,7 @@ canasta básica, a partir de datos de la EPH.">
       Figura 5. Distribución de edad del jefe varón, promedio 2017-2025
     </h3>
     <div id="edad-jefe-varon" class="report-figure">
-  <p><img src="graficos/2026_dis_a/g4.png" alt="" width="900" /></p>
+  <p><img src="graficos/2026_dis_a/g4.png" alt="" width="70%" /></p>
    </div>
     <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
       Fuente: elaboración propia en base a EPH-INDEC.
@@ -220,7 +220,7 @@ canasta básica, a partir de datos de la EPH.">
       Figura 6. Distribución de edad de la jefa mujer, promedio 2017-2025
     </h3>
     <div id="edad-jefa-mujer" class="report-figure">
-  <p><img src="graficos/2026_dis_a/g5.png" alt="" width="900" /></p>
+  <p><img src="graficos/2026_dis_a/g5.png" alt="" width="70%" /></p>
    </div>
     <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
       Fuente: elaboración propia en base a EPH-INDEC.
@@ -239,12 +239,12 @@ canasta básica, a partir de datos de la EPH.">
   </h3>
   <div id="figura-7" class="report-figure" style="display: flex; gap: 16px; justify-content: center;">
     <div style="flex: 1;">
-  <p><img src="graficos/2026_dis_a/g6.png" alt="" width="900" /></p>
+  <p><img src="graficos/2026_dis_a/g6.png" alt="" width="750" /></p>
 
   </div>
     <div style="flex: 1;">
 
-  <p><img src="graficos/2026_dis_a/g7.png" alt="" width="900" /></p>
+  <p><img src="graficos/2026_dis_a/g7.png" alt="" width="750" /></p>
     </div>
   </div>
   <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
@@ -384,17 +384,40 @@ canasta básica, a partir de datos de la EPH.">
   <script>
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".report-figure img").forEach(function (img) {
-      if (!img.closest("a.glightbox")) {
+      if (!img.closest("a.report-lightbox")) {
         var link = document.createElement("a");
         link.href = img.getAttribute("src");
-        link.classList.add("glightbox");
+        link.classList.add("report-lightbox");
         img.parentNode.insertBefore(link, img);
         link.appendChild(img);
       }
     });
 
     if (typeof GLightbox === "function") {
-      GLightbox({ selector: ".glightbox" });
+      var lightbox = GLightbox({ selector: ".report-lightbox" });
+      var closingFromPopstate = false;
+
+      // Al abrir: pusheamos un estado falso para capturar el "atrás"
+      lightbox.on('open', function () {
+        history.pushState({ glightboxOpen: true }, '');
+      });
+
+      // Al cerrar (por click, X, o swipe): si no vino del botón "atrás",
+      // consumimos el estado falso para no dejar basura en el historial
+      lightbox.on('close', function () {
+        if (!closingFromPopstate && history.state && history.state.glightboxOpen) {
+          history.back();
+        }
+        closingFromPopstate = false;
+      });
+
+      // Al apretar "atrás": cerramos el lightbox en vez de navegar
+      window.addEventListener('popstate', function () {
+        if (document.querySelector('.glightbox-container')) {
+          closingFromPopstate = true;
+          lightbox.close();
+        }
+      });
     }
   });
   </script>

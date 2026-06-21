@@ -59,7 +59,7 @@ Si bien la pregunta nace debido al espacio geográfico de CABA, decidimos llevar
 
 
 ```{r, echo=FALSE}
-knitr::include_graphics("graficos/2026_dis_a/cbt_indec.png") # , out.width="70%"
+knitr::include_graphics("graficos/2026_dis_a/cbt_indec.png") # 
 ```
 
 
@@ -130,7 +130,7 @@ Ahora bien, sin importar la cantidad de adultos que haya en el hogar, la distrib
 ```
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width="70%"}
 knitr::include_graphics("graficos/2026_dis_a/g2.png") # , out.width="70%"}
 ```
 
@@ -156,7 +156,7 @@ En el caso de las edades, se ha relajado la especificación para contemplar un e
 ```
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width="70%"}
 knitr::include_graphics("graficos/2026_dis_a/g3.png")
 ```
 
@@ -185,7 +185,7 @@ La familia tipo asume que el jefe varón tiene 35 años y la jefa mujer 31 años
 ```
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width="70%"}
 knitr::include_graphics("graficos/2026_dis_a/g4.png")
 ```
 
@@ -203,7 +203,7 @@ knitr::include_graphics("graficos/2026_dis_a/g4.png")
 ```
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.width="70%"}
 knitr::include_graphics("graficos/2026_dis_a/g5.png")
 ```
 

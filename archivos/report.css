@@ -200,12 +200,55 @@
   margin: 1.5rem auto;
 }
 
-/* Centra imágenes estáticas (PNG/JPG) dentro del contenedor de figura */
+/* Imágenes estáticas del reporte (centrado + lightbox + sombra) */
+
 .report-figure img {
   display: block;
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.report-figure img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+#lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+  z-index: 10000;
+  cursor: zoom-out;
+}
+
+#lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transform: scale(0.95);
+  transition: transform 0.25s ease;
+}
+
+#lightbox-overlay.active img {
+  transform: scale(1);
 }
 
 /* Forzar que plotly respete el contenedor */
