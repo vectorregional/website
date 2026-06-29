@@ -26,33 +26,33 @@ output:
 
 <p style="text-align: justify;">
 
-La caída de la tasa de natalidad es uno de los fenómenos demográficos más comentados de los últimos años en Argentina —y en buena parte del mundo—. Menos nacimientos significa, entre otras cosas, hogares más chicos, estructuras familiares distintas a las de generaciones anteriores y, como consecuencia, un cambio en cómo deberíamos pensar las mediciones de pobreza que parten de una "familia tipo" fija. ¿Sigue teniendo sentido hablar de un hogar de cuatro integrantes, con dos hijos en edad escolar, como la unidad de referencia?
+La caída de la tasa de natalidad es uno de los fenómenos demográficos más comentados de los últimos años en Argentina —y en buena parte del mundo—. Menos nacimientos significa, entre otras cosas, hogares más chicos, estructuras familiares distintas a las de generaciones anteriores y, como consecuencia, un cambio en cómo deberíamos pensar las mediciones de pobreza que parten de una "familia tipo" fija. <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">¿Sigue teniendo sentido hablar de un hogar de cuatro integrantes, con dos hijos en edad escolar, como la unidad de referencia? </span>
 
   </p>
 
   <p style="text-align: justify;">
 
-La semana pasada había salido el dato de inflación de la Ciudad de Buenos Aires (CABA) y el periodista lo estaba comentando. En verdad, se escuchaba algo como lo siguiente:
+La semana pasada había salido el dato de inflación a nivel nacional, y mientras volvía a casa escuchaba por la radio algo como lo siguiente:
 
   </p>
 
 <blockquote style="margin-left: 40px; margin-right: 40px; text-align: justify; font-style: italic;">
 <p>
 
-"la inflación de la ciudad de Buenos Aires trepó al 2,6%. Como consecuencia (...) Transporte, comunicación y cuidado personal como mayores incrementos (...) Así, un hogar tipo, con dos adultos de 35 años de edad junto con dos hijos de 9 y 6 años necesitó $ 1.500.000 para no ser considerado pobre y $ 800.000 a su vez para no ser considerado indigente" (cifras aproximadas).
+"la inflación a nivel nacional desaceleró su ritmo (...) alcanzando esta vez un incremento del 2,1%. Como consecuencia (...) Comunicación como rubro con mayor incremento (...) Así, un <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">hogar tipo, con dos adultos de 35 y 31 años de edad junto con dos hijos de 9 y 6 años</span> necesitó $ 1.500.000 para no ser considerado pobre y $ 700.000 a su vez para no ser considerado indigente" (cifras aproximadas).
 
 </p>
 </blockquote>
 
-  <p style="text-align: justify;">
+<p style="text-align: justify;">
 
-Ese hogar que aparece de manera recurrente en informes oficiales, titulares periodísticos y debates televisivos, ¿existe realmente en la Argentina actual? Y si no existe —lo cierto es que estas construcciones estadísticas intentan aproximarse a la realidad—, ¿cuántos hogares argentinos se parecen a esa descripción? En otras palabras, ¿cuán "tipo" es verdaderamente una familia tipo?
-Si bien la pregunta nace debido al espacio geográfico de CABA, decidimos llevar este razonamiento a nivel nacional. Por tal motivo, dejamos adjunto cómo se componen los hogares tipo a nivel nacional al momento de construir canastas de consumo y, en consecuencia, determinar cuánto necesita un hogar para ser considerado pobre o indigente.
+Ese hogar que aparece de manera recurrente en informes oficiales, titulares periodísticos y debates televisivos, ¿existe realmente en la Argentina actual? Y si no existe —lo cierto es que estas construcciones estadísticas intentan aproximarse a la realidad—, ¿cuántos hogares argentinos se parecen a esa descripción? En otras palabras, <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">¿cuán "tipo" es verdaderamente una familia tipo? </span>
+Si bien la cita radial refiere a un dato nacional, a continuación se presentan las cifras correspondientes al Gran Buenos Aires (GBA), publicadas mensualmente por el INDEC, a fin de ilustrar tres tipos de canastas.
 
   </p>
 
   <h3 class="figure-title">
-    Figura 1. Canasta Básica Total (CBT) y Alimentaria (CBA) de tres hogares tipo a nivel nacional para precios de mayo de 2026
+    Figura 1. Canasta Básica Total (CBT) y Alimentaria (CBA) de tres hogares tipo para el Gran Buenos Aires (GBA), precios de mayo de 2026
   </h3>
   <div id="canastas-indec" class="report-figure">
 ```
@@ -71,7 +71,7 @@ knitr::include_graphics("graficos/2026_dis_a/cbt_indec.png") #
 
 <p style="text-align: justify;">
 
-De acuerdo con la última estimación de las canastas, el hogar de tres integrantes debió tener un ingreso de $ 1.498.741 para no ser considerado "hogar pobre", y de $ 681.246 para no ser considerado "hogar indigente". Dejando de lado el análisis de ingresos para otra ocasión, en este caso interesa saber cuán probable —a partir de participaciones del período de análisis— es encontrar un hogar cuyos integrantes sean un hombre de 35 años, una mujer de 31 años, un hijo de 6 años y una hija de 8 años —independientemente de los parentescos—. Asimismo, del análisis es posible inferir los otros dos casos.
+De acuerdo con la última estimación de las canastas, el hogar de cuatro integrantes debió tener un ingreso de $ 1.498.741 para no ser considerado "hogar pobre", y de $ 681.246 para no ser considerado "hogar indigente". Dejando de lado el análisis de ingresos para otra ocasión, en este caso interesa saber cuán probable —a partir de participaciones del período de análisis— es encontrar un hogar cuyos integrantes sean un hombre de 35 años, una mujer de 31 años, un hijo de 6 años y una hija de 8 años —independientemente de los parentescos—. Asimismo, del análisis es posible inferir los otros dos casos.
 
 </p>
 
@@ -87,12 +87,12 @@ De acuerdo con la última estimación de las canastas, el hogar de tres integran
 
 <p style="text-align: justify;">
 
-Una de las características centrales de la familia tipo es que el hogar lo integran un hombre y una mujer, ambos adultos. Definimos como "adulto" a cualquier miembro del hogar que no sea hijo o hijastro del jefe, independientemente de su edad. Bajo este criterio, el 52,2% de los hogares urbanos argentinos cuenta con exactamente un hombre y una mujer, ambos adultos. Esto significa que casi la mitad de los hogares sobre los que versan las canastas quedan fuera de la caracterización desde el primer paso.
+Una de las características centrales de la familia tipo es que, entre sus miembros adultos, haya un hombre y una mujer. Definimos como "adulto" a cualquier miembro del hogar que no sea hijo o hijastro del jefe, independientemente de su edad. Bajo este criterio, el 52,2% de los hogares urbanos argentinos cuenta con exactamente un hombre y una mujer, ambos adultos. Esto significa que casi la mitad de los hogares sobre los que versan las canastas quedan fuera de la caracterización desde un primer paso.
 
 </p>
 
   <h3 class="figure-title">
-    Figura 2. Hogares con dos adultos de distinto sexo vs. resto, promedio 2017-2025
+    Figura 2. Hogares con dos adultos de distinto sexo vs. resto. Promedio 2017-2025 en el total aglomerados urbanos EPH
   </h3>
   <div id="adultos-distinto-sexo" class="report-figure">
 ```
@@ -118,7 +118,7 @@ Ahora bien, sin importar la cantidad de adultos que haya en el hogar, la distrib
 </p>
 
   <h3 class="figure-title">
-    Figura 3. Distribución de hogares según cantidad de hijos, promedio 2017-2025
+    Figura 3. Distribución de hogares según cantidad de hijos. Promedio 2017-2025 en el total aglomerados urbanos EPH
   </h3>
   <div id="cantidad-hijos" class="report-figure">
 ```
@@ -139,12 +139,12 @@ knitr::include_graphics("graficos/2026_dis_a/g2.png") # , out.width="70%"}
 
 <p style="text-align: justify;">
 
-En el caso de las edades, se ha relajado la especificación para contemplar un entorno sobre los valores que sugiere el INDEC. En este sentido, sobre el total de hijos en hogares biparentales, la distribución de edades en entorno de entre 3 y 7 años para uno de los hijos, y entre 7 y 11 años para la hija, capturan una porción acotada de la distribución real. La gran mayoría de los hijos se distribuye de manera bastante uniforme entre 0 y 20 años, sin una concentración marcada en ningún rango particular.
+En el caso de las edades, se ha relajado la especificación para contemplar un entorno sobre los valores que sugiere el INDEC. En este sentido, sobre el total de hijos del total de hogares, la distribución de edades en entorno de entre 3 y 7 años para uno de los hijos, y entre 7 y 11 años para el otro, capturan una porción acotada de la distribución real. La gran mayoría de los hijos se distribuye de manera bastante uniforme entre 0 y 20 años, sin una concentración marcada en ningún rango particular.
 
 </p>
 
   <h3 class="figure-title">
-    Figura 4. Distribución de edad de los hijos en hogares biparentales, promedio 2017-2025
+    Figura 4. Distribución de edad de los hijos. Promedio 2017-2025 en el total aglomerados urbanos EPH
   </h3>
   <div id="edad-hijos" class="report-figure">
 ```
@@ -156,14 +156,14 @@ knitr::include_graphics("graficos/2026_dis_a/g3.png")
 
 
 ```{=html}
- </div>
-  <p style="font-size: 0.8rem; color: #666; margin-top: -0.1rem;">
-    Nota: Se limitó la muestra a hijos menores a 30 años para evitar distorsiones ocasionadas por hogares en los que se encuentran hijos mayores.
-  </p>
-  <p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
-    Fuente: Vector Regional en base a EPH-INDEC.
-  </p>
-
+</div>
+<p style="font-size: 0.85rem; color: #666; margin: 4px 0 0 0;">
+  Fuente: Vector Regional en base a EPH-INDEC.
+  <span class="tooltip-wrapper">
+    <span class="tooltip-icon">?</span>
+    <span class="tooltip-text">Se limitó la muestra a hijos menores de 30 años para evitar distorsiones ocasionadas por hogares en los que se encuentran hijos mayores.</span>
+  </span>
+</p>
 <h3 class="section-subtitle">¿Qué edad tienen los jefes de hogar?</h3>
 
 <p style="text-align: justify;">
@@ -173,7 +173,7 @@ La familia tipo asume que el jefe varón tiene 35 años y la jefa mujer 31 años
 </p>
 
   <h3 class="figure-title">
-    Figura 5. Distribución de edad del jefe varón, promedio 2017-2025
+    Figura 5. Distribución de edad del jefe varón. Promedio 2017-2025 en el total aglomerados urbanos EPH
   </h3>
   <div id="edad-jefe-varon" class="report-figure">
 ```
@@ -191,7 +191,7 @@ knitr::include_graphics("graficos/2026_dis_a/g4.png")
   </p>
 
   <h3 class="figure-title">
-    Figura 6. Distribución de edad de la jefa mujer, promedio 2017-2025
+    Figura 6. Distribución de edad de la jefa mujer. Promedio 2017-2025 en el total aglomerados urbanos EPH
   </h3>
   <div id="edad-jefa-mujer" class="report-figure">
 ```
@@ -217,7 +217,7 @@ Vale la pena observar estas dimensiones de manera individual. El 68,3% de los ho
 </p>
 
 <h3 class="figure-title">
-  Figura 7. Hogares con exactamente un adulto (A) y una mujer (B) promedio 2017-2025
+  Figura 7. Hogares con exactamente un adulto hombre (A) y una adulta mujer (B). Promedio 2017-2025 en el total aglomerados urbanos EPH
 </h3>
 <div id="figura-7" class="report-figure" style="display: flex; gap: 16px; justify-content: center;">
   <div style="flex: 1;">
@@ -289,7 +289,7 @@ Una advertencia metodológica adicional resulta pertinente. La EPH fue concebida
 
 </p>
 
-<a href="#ref-nota-metodologica" class="back-link">↩ Volver al texto</a>
+<a href="#ref-nota-metodologica" class="back-link">↑ Volver al texto</a>
 
 </div>
 

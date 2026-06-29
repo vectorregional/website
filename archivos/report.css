@@ -429,3 +429,48 @@
 html {
   scroll-behavior: smooth;
 }
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.tooltip-icon {
+  cursor: help;
+  color: #0E3E36;
+  font-weight: bold;
+  font-size: 0.75rem;
+  border: 1px solid #0E3E36;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+}
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 125%;
+  right: 0;              /* en vez de left: 50% + translateX */
+  left: auto;
+  transform: none;
+  background: #0E3E36;
+  text-align: justify;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  width: 200px;
+  max-width: 70vw;       /* nunca más ancho que el 70% de la pantalla */
+  text-align: left;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+.tooltip-wrapper:hover .tooltip-text,
+.tooltip-wrapper:focus .tooltip-text,
+.tooltip-wrapper:active .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
