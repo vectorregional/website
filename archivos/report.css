@@ -509,8 +509,11 @@ html {
 .report-toc h4 {
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #0E3E36;
   font-size: 1rem;
+  display: inline-block;
+  background-color: #0E3E36;
+  color: white;
+  padding: 2px 4px;
 }
 
 .report-toc a {
