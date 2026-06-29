@@ -17,10 +17,21 @@
 
 
 .report-container {
+  margin: 0;
+  width: 100%;
+  overflow: visible;
+}
+
+.report > .report-container {
   width: min(92%, 900px);
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.5rem;
+}
+
+.report,
+.report-wrapper {
+  overflow: visible;
 }
 
 /* ===== Header del informe ===== */
@@ -489,11 +500,6 @@ html {
   align-items: start;
 }
 
-.report-container {
-  margin: 0;
-  width: 100%;
-}
-
 .report-toc {
   position: sticky;
   top: 7rem;          /* ← subí este valor para que quede bajo el header */
@@ -532,8 +538,7 @@ html {
 }
 
 .report,
-.report-wrapper,
-.report-container {
+.report-wrapper {
   overflow: visible; /* o directamente no definir overflow */
 }
 
