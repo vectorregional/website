@@ -10,9 +10,6 @@ output:
     template: !expr here::here("archivos", "report_template.html")
 ---
 
-
-
-
 ```{=html}
 <article class="report">
 <div id="scroll-progress"></div>
@@ -20,7 +17,7 @@ output:
 <div class="report-wrapper">
 
 <nav class="report-toc">
-  <h4>Qué vas a leer</h4>
+  <h4>Contenido</h4>
   <a href="#canastas-indec">Canastas del INDEC</a>
   <a href="#adultos-distinto-sexo">Hogares por sexo</a>
   <a href="#cantidad-hijos">Cantidad de hijos</a>
@@ -37,7 +34,7 @@ output:
     
   <p class="report-kicker">Sociedad · Consumo · Pobreza</p>
   <h1>¿Cuán representativa es una familia tipo?</h1>
-  <p class="report-date">Julio 2026</p>
+  <p class="report-date">Julio 2026 · 6 min. de lectura</p>
   
     </header>
     
@@ -45,7 +42,7 @@ output:
 
 <p style="text-align: justify;">
 
-La caída de la tasa de natalidad es uno de los fenómenos demográficos más comentados de los últimos años en Argentina —y en buena parte del mundo—. Menos nacimientos significa, entre otras cosas, hogares más chicos, estructuras familiares distintas a las de generaciones anteriores y, como consecuencia, un cambio en el contexto demográfico sobre el que se construyen las mediciones de pobreza que parten de una "familia tipo" fija. <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">¿Sigue teniendo sentido hablar de un hogar de cuatro integrantes, con dos hijos en edad escolar, como la unidad de referencia? </span>
+En los últimos años, la caída de la tasa de natalidad se convirtió en uno de los fenómenos demográficos más comentados, tanto en Argentina como en buena parte del mundo. Menos nacimientos significa hogares más chicos y estructuras familiares distintas a las de generaciones anteriores. Como consecuencia, el contexto demográfico ya no se parece al que dio forma a las mediciones de pobreza vigentes. En ese marco surge una pregunta concreta: <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">¿sigue teniendo sentido hablar de un hogar de cuatro integrantes, con dos hijos en edad escolar, como la unidad de referencia?</span>
 
   </p>
 
@@ -61,11 +58,12 @@ La semana pasada había salido el dato de inflación a nivel nacional, y mientra
 "la inflación a nivel nacional desaceleró su ritmo (...) alcanzando esta vez un incremento del 2,1%. Como consecuencia (...) Comunicación como rubro con mayor incremento (...) Así, un hogar tipo, con dos adultos de 35 y 31 años de edad junto con dos hijos de 9 y 6 años necesitó $ 1.500.000 para no ser considerado pobre y $ 700.000 a su vez para no ser considerado indigente" (cifras aproximadas).
 
 </p>
+
 </blockquote>
 
 <p style="text-align: justify;">
 
-Ese hogar que aparece de manera recurrente en informes oficiales, titulares periodísticos y debates televisivos, ¿existe realmente en la Argentina actual? Y si no existe, ¿cuántos hogares argentinos se parecen a esa descripción? En otras palabras, <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">¿cuán "tipo" es verdaderamente una familia tipo? </span>
+Ese hogar que aparece de manera recurrente en informes oficiales, titulares periodísticos y debates televisivos, ¿existe realmente en la Argentina actual? Y si no existe, ¿cuántos hogares argentinos se parecen a esa descripción? En otras palabras, <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">¿cuán "tipo" es una familia tipo? </span>
 Si bien la cita radial refiere a un dato nacional, a continuación se presentan las cifras correspondientes al Gran Buenos Aires (GBA), publicadas mensualmente por el INDEC, a fin de ilustrar tres tipos de canastas.
 
   </p>
@@ -108,7 +106,7 @@ De acuerdo con la última estimación de las canastas, el hogar de referencia de
 
 <p style="text-align: justify;">
 
-Una de las características centrales de la familia tipo es que, entre sus miembros adultos, haya un hombre y una mujer. Definimos como "adulto" a cualquier miembro del hogar que no sea hijo o hijastro del jefe, independientemente de su edad. Bajo este criterio, <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">el 52,2% de los hogares urbanos argentinos cuenta con exactamente un hombre y una mujer, ambos adultos</span>. Esto significa que casi la mitad de los hogares sobre los que versan las canastas quedan fuera de la caracterización desde un primer paso.
+Una de las características centrales de la familia tipo es que, entre sus miembros adultos, haya un hombre y una mujer. Definimos como "adulto" a cualquier miembro del hogar que no sea hijo o hijastro del jefe, independientemente de su edad. Bajo este criterio, <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">el 52,2% de los hogares urbanos argentinos cuenta con exactamente un hombre y una mujer, ambos adultos</span>. Esto significa que casi la mitad de los hogares sobre los que versan las canastas oficiales quedan fuera de la caracterización desde un primer paso.
 
 </p>
 
@@ -135,7 +133,7 @@ knitr::include_graphics("graficos/2026_dis_a/g1.png") # , out.width="70%"
 
 <p style="text-align: justify;">
 
-Ahora bien, sin importar la cantidad de adultos que haya en el hogar, la distribución de hijos es la siguiente: <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">el 40,3% de los hogares no tiene hijos, el 23,5% tiene uno, el 21,8% tiene dos, el 9,4% tiene tres y el 5,1% tiene cuatro o más</span>. Como se ha dicho, la familia tipo supone exactamente dos hijos, lo que equivale a poco más de uno de cada cinco hogares del total.
+Habiendo caracterizado a los adultos, interesa analizar la cantidad de hijos por hogar. Sin importar la cantidad de adultos que haya, <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">el 40,3% de los hogares no tiene hijos, el 23,5% tiene uno, el 21,8% tiene dos, el 9,4% tiene tres y el 5,1% tiene cuatro o más</span>. Como se ha dicho, la familia tipo supone exactamente dos hijos, lo que equivale a poco más de uno de cada cinco hogares del total.
 
 </p>
 
@@ -162,13 +160,13 @@ knitr::include_graphics("graficos/2026_dis_a/g2.png") # , out.width="70%"}
 
 <p style="text-align: justify;">
 
-En el caso de las edades, se ha relajado la especificación para contemplar un entorno sobre los valores que sugiere el INDEC. En este sentido, sobre el total de hijos —sin distinción del tipo de hogar en el que residen— la distribución de edades comprendidas entre 3 y 7 años para uno de los hijos, y entre 7 y 11 años para el otro, captura una porción acotada de la distribución real. La mayor concentración de hijos se da entre los 12 y 15 años, con un máximo en los 14 años (4,1% del total). De hecho, los hijos de hasta 11 años representan el 34,9% del total, una proporción similar a la de quienes tienen entre 12 y 20 años (33,4%), mientras que la franja de 21 a 30 años cae al 21,0%.
+Continuando el análisis, para contemplar las edades y el sexo de los hijos en los hogares, se flexibilizó la especificación utilizada por el INDEC en ambas dimensiones. En el caso del sexo, la distribución resultó prácticamente uniforme —rondando el 52/48 tanto en el total como dentro de los rangos de edad de interés—, por lo que esta dimensión no introduce distorsiones relevantes. Por su parte, las edades se flexibilizaron en un entorno de ±2 años respecto de los valores de referencia del INDEC. La mayor concentración de hijos se da entre los 12 y 15 años, con un máximo en los 14 años (4,1% del total). De hecho, los hijos de hasta 11 años representan el 34,9% del total, una proporción similar a la de quienes tienen entre 12 y 20 años (33,4%), mientras que la franja de 21 a 30 años cae al 21,0%.
 
 </p>
 
 <p style="text-align: justify;">
 
-Más específicamente, <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">los rangos de edad de referencia utilizados por el INDEC representan el 26,8% del total de hijos relevados por la EPH: el 12,1% tiene entre 3 y 7 años y el 14,7% entre 7 y 11 años</span>. En consecuencia, el 73,2% restante corresponde a hijos con edades diferentes de las contempladas en las canastas de referencia.
+Más específicamente, y <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">volviendo a los rangos de referencia del INDEC, estos representan el 26,8% del total de hijos relevados por la EPH: el 12,1% tiene entre 3 y 7 años y el 14,7% entre 7 y 11 años</span>. En consecuencia, el 73,2% restante corresponde a hijos con edades diferentes de las contempladas en las canastas de referencia.
 
 </p>
 
@@ -286,7 +284,7 @@ knitr::include_graphics("graficos/2026_dis_a/g7.png")
 
 <p style="text-align: justify;">
 
-A partir de los datos, una primera reflexión: la familia tipo no describe al hogar argentino promedio, sino a uno entre muchos. Poco más de la mitad de los hogares urbanos tiene exactamente un adulto varón y una adulta mujer; apenas uno de cada cinco tiene exactamente dos hijos; y menos de un cuarto de los jefes varones cae en el rango etario que asumen las canastas oficiales. Cuando se exigen todas las condiciones a la vez, el universo de hogares que se ajusta a esa descripción se vuelve muy pequeño.
+A partir de los datos, una primera reflexión: la familia tipo a la que tantas veces se hace mención no describe el hogar argentino promedio, sino a uno entre muchos. Poco más de la mitad de los hogares urbanos tiene exactamente un adulto varón y una adulta mujer; apenas uno de cada cinco tiene exactamente dos hijos; y menos de un cuarto de los jefes varones cae en el rango etario que asumen las canastas oficiales. Cuando se exigen todas las condiciones a la vez, el universo de hogares que se ajusta a esa descripción se vuelve muy pequeño.
 
 </p>
 

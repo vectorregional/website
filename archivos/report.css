@@ -553,3 +553,7 @@ span[id] {
   scroll-margin-top: 7rem;
 }
 
+::selection {
+  background-color: #0E3E36;
+  color: white;
+}
