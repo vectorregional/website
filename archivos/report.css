@@ -474,3 +474,81 @@ html {
   visibility: visible;
   opacity: 1;
 }
+
+/* agregado el 29/06 */
+
+/* =========================================================
+   ÍNDICE LATERAL
+   ========================================================= */
+
+.report-wrapper {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 900px);
+  gap: 3rem;
+  justify-content: center;
+  align-items: start;
+}
+
+.report-container {
+  margin: 0;
+  width: 100%;
+}
+
+.report-toc {
+  position: sticky;
+  top: 7rem;          /* ← subí este valor para que quede bajo el header */
+  
+  max-height: calc(100vh - 7rem);   /* ← ajustá en consecuencia */
+  overflow-y: auto;
+
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.report-toc h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #0E3E36;
+  font-size: 1rem;
+}
+
+.report-toc a {
+  display: block;
+  margin-bottom: .8rem;
+  color: #666;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.report-toc a:hover {
+  background-color: #0E3E36;
+  color: #ffffff;
+}
+
+.report,
+.report-wrapper,
+.report-container {
+  overflow: visible; /* o directamente no definir overflow */
+}
+
+/* Mobile */
+
+@media (max-width: 1100px) {
+
+  .report-wrapper {
+    display: block;
+  }
+
+  .report-toc {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+}
+
+span[id] {
+  scroll-margin-top: 7rem;
+}
