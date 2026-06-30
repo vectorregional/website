@@ -22,11 +22,20 @@
   overflow: visible;
 }
 
-.report > .report-container {
+.report .report-container {
   width: min(92%, 900px);
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.5rem;
+}
+
+/* Cuando el report-container vive dentro de .report-wrapper (notas con
+   índice lateral), el ancho de la columna lo maneja el grid, pero igual
+   necesita su padding lateral propio para no pegar contra el borde en mobile */
+.report-wrapper .report-container {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .report,
