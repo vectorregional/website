@@ -494,10 +494,10 @@ html {
 /* Desktop: grid de dos columnas, toc al costado */
 .report-container:has(.report-toc) {
   display: grid;
-  grid-template-columns: minmax(0, 900px) 260px;
+  grid-template-columns: 260px minmax(0, 900px);
   grid-template-areas:
-    "header toc"
-    "body   toc";
+    "toc header"
+    "toc body";
   gap: 3rem;
   align-items: start;
 }
