@@ -3,18 +3,16 @@
    ========================================================= */
 
 
-/* ===== Sección principal del report ===== */
+/* =========================================================
+   1. LAYOUT BASE — .report / .report-container
+   ========================================================= */
+
 .report {
-  padding: 5rem 0;
-  /* Espacio vertical editorial */
-
-  background-color: #ffffff;
-  /* Fondo blanco como en el PDF */
-
-  text-align: left;
-  /* CLAVE: fuerza alineación izquierda del contenido */
+  padding: 5rem 0;          /* Espacio vertical editorial */
+  background-color: #ffffff; /* Fondo blanco como en el PDF */
+  text-align: left;          /* Fuerza alineación izquierda del contenido */
+  overflow: visible;
 }
-
 
 .report-container {
   margin: 0;
@@ -22,6 +20,7 @@
   overflow: visible;
 }
 
+/* Ancho centrado estándar (reportes sin TOC) */
 .report .report-container {
   width: min(92%, 900px);
   margin-left: auto;
@@ -29,276 +28,136 @@
   padding: 0 1.5rem;
 }
 
-.report {
-  overflow: visible;
+/* Scroll suave al saltar entre anclas */
+html {
+  scroll-behavior: smooth;
 }
 
-/* ===== Header del informe ===== */
+::selection {
+  background-color: #0E3E36;
+  color: white;
+}
+
+
+/* =========================================================
+   2. ÍNDICE LATERAL (TOC) — solo notas con .report-toc
+   ========================================================= */
+
+/* Cuando hay TOC, el contenedor necesita más ancho total para que
+   el cuerpo conserve los mismos ~900px que en los reportes normales:
+   260px (toc) + 48px (gap) + 900px (body) */
+.report .report-container:has(.report-toc) {
+  width: min(96%, 1208px);
+}
+
+/* Desktop: grid de dos columnas, toc a la izquierda */
+.report-container:has(.report-toc) {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 900px);
+  grid-template-areas:
+    "toc header"
+    "toc body";
+  gap: 3rem;
+  align-items: start;
+}
+
+.report-container:has(.report-toc) .report-header { grid-area: header; }
+.report-container:has(.report-toc) .report-body   { grid-area: body; }
+
+.report-toc {
+  grid-area: toc;
+  position: sticky;
+  top: 7rem;
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.report-toc h4 {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background-color: #0E3E36;
+  color: white;
+  padding: 2px 4px;
+}
+
+.report-toc a {
+  display: block;
+  margin-bottom: .8rem;
+  color: #666;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.report-toc a:hover {
+  background-color: #0E3E36;
+  color: #ffffff;
+}
+
+/* Mobile / ventana angosta: TOC vuelve al flujo normal del documento
+   (header -> toc -> body), sin grid, y el contenedor recupera el
+   ancho estándar de los reportes */
+@media (max-width: 1100px) {
+  .report-container:has(.report-toc) {
+    display: block;
+  }
+
+  .report .report-container:has(.report-toc) {
+    width: min(92%, 900px);
+  }
+
+  .report-toc {
+    position: static;
+    margin: 1.5rem 0 2rem;
+  }
+}
+
+/* Offset para que el header sticky no tape los anclajes al saltar */
+span[id] {
+  scroll-margin-top: 7rem;
+}
+
+
+/* =========================================================
+   3. HEADER DEL INFORME
+   ========================================================= */
+
 .report-header {
   margin-bottom: 1rem;
-
-  border-left: 4px solid #0E3E36;
-  /* Verde principal institucional */
-
+  border-left: 4px solid #0E3E36; /* Verde principal institucional */
   padding-left: 1.2rem;
-
   text-align: left;
-  /* Fuerza alineación izquierda del título */
 }
 
-
-/* ===== Kicker / categoría ===== */
 .report-kicker {
   font-size: 0.9rem;
-
   text-transform: uppercase;
   letter-spacing: 0.08em;
-
-  color: #4D8A62;
-  /* Verde secundario */
-
+  color: #4D8A62; /* Verde secundario */
   margin-bottom: 0.5rem;
 }
 
-
-/* ===== Título principal ===== */
 .report-header h1 {
   font-size: 2.6rem;
   line-height: 1.2;
   font-weight: 700;
-
-  color: #0E3E36;
-  /* Verde principal */
-
+  color: #0E3E36; /* Verde principal */
   margin-bottom: 1rem;
-
   text-align: left;
 }
 
-
-/* ===== Fecha ===== */
 .report-date {
   font-size: 0.9rem;
   color: #6c757d;
-
   text-align: left;
 }
 
-
-/* ===== Cuerpo del informe ===== */
-.report-body {
-  text-align: left;
-  /* Evita cualquier centrado heredado */
-}
-
-.report-body p {
-  font-size: 1.05rem;
-  line-height: 1.75;
-
-  color: #2f2f2f;
-  /* Gris editorial, similar al PDF */
-
-  margin-bottom: 1.4rem;
-}
-
-
-/* ===== Subtítulos de sección (h2 y h3) ===== */
-.report-body h2 {
-  font-size: 1.6rem;
-  font-weight: 600;
-
-  margin-top: 2rem;
-  margin-bottom: 1.4rem;
-
-    padding: 0;          /* 👈 anula el padding heredado del template */
-
-  color: #0E3E36;
-
-  text-align: left;
-}
-
-.report-body h3.section-subtitle {
-  font-size: 1.3rem;
-  font-weight: 600;
-
-  margin-top: 2rem;
-  margin-bottom: 1.4rem;
-
-  color: #4D8A62;
-
-  text-align: left;
-}
-
-
-/* ===== Botón de descarga ===== */
-.report-body .btn-primary {
-  background-color: #4D8A62;
-  border-color: #4D8A62;
-
-  font-weight: 500;
-}
-
-.report-body .btn-primary:hover {
-  background-color: #0E3E36;
-  border-color: #0E3E36;
-}
-
-/* ===== Enlaces de descarga editoriales ===== */
-.download-link {
-  position: relative;
-  display: block;
-  padding-left: 5.5rem;
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.25s ease;
-}
-
-/* Línea inicial */
-.download-link::before {
-  content: "";
-  position: absolute;
-  left: 2rem;
-  top: 50%;
-  width: 2rem;
-  height: 2px;
-  transform: translateY(-50%);
-  transition: width 0.25s ease;
-}
-
-/* Flecha (oculta por defecto) */
-.download-link::after {
-  content: "";
-  position: absolute;
-  left: calc(2rem + 1.3rem);
-  top: 50%;
-  width: 0.45rem;
-  height: 0.45rem;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: translateY(-50%) rotate(-45deg);
-  opacity: 0;
-  transition: opacity 0.25s ease;
-}
-
-/* Hover: línea se acorta + aparece flecha */
-.download-link:hover::before {
-  width: 1.2rem;
-}
-
-.download-link:hover::after {
-  opacity: 1;
-}
-
-/* ===== Variantes cromáticas ===== */
-.download-link.primary {
-  color: #C9483B; /* rojo editorial */
-}
-
-.download-link.primary::before {
-  background-color: #C9483B;
-}
-
-.download-link.secondary {
-  color: #6FAFB0; /* verde-azulado técnico */
-}
-
-.download-link.secondary::before {
-  background-color: #6FAFB0;
-}
-
-/* ===== Contenedor de descargas ===== */
-.report-downloads {
-  margin-top: 1rem;
-}
-
-/* Espaciado solo si hay más de un descargable */
-.report-downloads .download-link + .download-link {
-  margin-top: 2.2rem;
-}
-
-/* ===== Gráficos dentro del reporte ===== */
-
-.report-figure {
-  max-width: 720px;
-  margin: 1.5rem auto;
-}
-
-/* Imágenes estáticas del reporte (centrado + lightbox + sombra) */
-
-.report-figure img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 4px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  cursor: zoom-in;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.report-figure img:hover {
-  transform: scale(1.01);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-}
-
-#lightbox-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s ease;
-  z-index: 10000;
-  cursor: zoom-out;
-}
-
-#lightbox-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-#lightbox-overlay img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 4px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  transform: scale(0.95);
-  transition: transform 0.25s ease;
-}
-
-#lightbox-overlay.active img {
-  transform: scale(1);
-}
-
-/* Forzar que plotly respete el contenedor */
-.report-figure .html-widget,
-.report-figure .svg-container {
-  width: 100% !important;
-}
-
-@media (max-width: 768px) {
-  .report-figure {
-    max-width: 100%;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-/* ===== Título de figuras ===== */
-.figure-title {
-  color: var(--accent-color);
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-/* ===== Fecha de última actualización ===== */
 .report-update {
   font-size: 0.85rem;
   color: #6c757d;
@@ -307,68 +166,20 @@
   font-style: italic;
 }
 
-/* =========================================================
-   FIX Plotly — evitar que la leyenda sea recortada
-   ========================================================= */
-
-/* Permite que la leyenda de Plotly sobresalga del gráfico */
-.report-figure,
-.report-figure .html-widget,
-.report-figure .plotly,
-.report-figure .svg-container {
-  overflow: visible !important;
-}
 
 /* =========================================================
-   FIX Scroll Progress Bar — barra de progreso de lectura
+   4. CUERPO DEL INFORME — tipografía y secciones
    ========================================================= */
 
-#scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 8px;
-  height: 0%;
-
-  background: #0E3E36;
-
-  z-index: 9999;
-
-  transition: height 0.08s linear;
+.report-body {
+  text-align: left; /* Evita cualquier centrado heredado */
 }
 
-
-/* =========================================================
-   FIGURAS EN FILA
-   ========================================================= */
-
-.figure-row {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.figure-row img {
-  flex: 0 0 calc(48% - 1rem);
-  max-width: calc(48% - 1rem);
-  height: auto;
-  display: block;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .figure-row {
-    gap: 1rem;
-  }
-
-  .figure-row img {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+.report-body p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #2f2f2f; /* Gris editorial, similar al PDF */
+  margin-bottom: 1.4rem;
 }
 
 .report-body strong {
@@ -376,8 +187,90 @@
   font-weight: 700;
 }
 
+.report-body h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+  padding: 0; /* anula el padding heredado del template */
+  color: #0E3E36;
+  text-align: left;
+}
 
-/* ===== Nota metodológica (al final del informe) ===== */
+.report-body h3.section-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1.4rem;
+  color: #4D8A62;
+  text-align: left;
+}
+
+/* Título de figuras */
+.figure-title {
+  color: var(--accent-color);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+
+/* =========================================================
+   5. TOOLTIPS
+   ========================================================= */
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-icon {
+  cursor: help;
+  color: #0E3E36;
+  font-weight: bold;
+  font-size: 0.75rem;
+  border: 1px solid #0E3E36;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4px;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 125%;
+  right: 0;
+  left: auto;
+  transform: none;
+  background: #0E3E36;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  width: 200px;
+  max-width: 70vw; /* nunca más ancho que el 70% de la pantalla */
+  text-align: left;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+
+.tooltip-wrapper:hover .tooltip-text,
+.tooltip-wrapper:focus .tooltip-text,
+.tooltip-wrapper:active .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* =========================================================
+   6. NOTA METODOLÓGICA (al final del informe)
+   ========================================================= */
 
 .note-divider {
   border: none;
@@ -435,129 +328,216 @@
   text-decoration: underline;
 }
 
-/* Scroll suave al saltar entre anclas */
-html {
-  scroll-behavior: smooth;
+
+/* =========================================================
+   7. DESCARGAS — botones tipo enlace
+   ========================================================= */
+
+.report-body .btn-primary {
+  background-color: #4D8A62;
+  border-color: #4D8A62;
+  font-weight: 500;
 }
 
-.tooltip-wrapper {
+.report-body .btn-primary:hover {
+  background-color: #0E3E36;
+  border-color: #0E3E36;
+}
+
+.report-downloads {
+  margin-top: 1rem;
+}
+
+/* Espaciado solo si hay más de un descargable */
+.report-downloads .download-link + .download-link {
+  margin-top: 2.2rem;
+}
+
+.download-link {
   position: relative;
-  display: inline-block;
+  display: block;
+  padding-left: 5.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
 }
-.tooltip-icon {
-  cursor: help;
-  color: #0E3E36;
-  font-weight: bold;
-  font-size: 0.75rem;
-  border: 1px solid #0E3E36;
-  border-radius: 50%;
-  width: 14px;
-  height: 14px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 4px;
-}
-.tooltip-text {
-  visibility: hidden;
-  opacity: 0;
+
+/* Línea inicial */
+.download-link::before {
+  content: "";
   position: absolute;
-  bottom: 125%;
-  right: 0;              /* en vez de left: 50% + translateX */
-  left: auto;
-  transform: none;
-  background: #0E3E36;
-  text-align: justify;
-  color: white;
-  padding: 8px 10px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  width: 200px;
-  max-width: 70vw;       /* nunca más ancho que el 70% de la pantalla */
-  text-align: left;
-  transition: opacity 0.2s;
-  z-index: 10;
+  left: 2rem;
+  top: 50%;
+  width: 2rem;
+  height: 2px;
+  transform: translateY(-50%);
+  transition: width 0.25s ease;
 }
-.tooltip-wrapper:hover .tooltip-text,
-.tooltip-wrapper:focus .tooltip-text,
-.tooltip-wrapper:active .tooltip-text {
-  visibility: visible;
+
+/* Flecha (oculta por defecto) */
+.download-link::after {
+  content: "";
+  position: absolute;
+  left: calc(2rem + 1.3rem);
+  top: 50%;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-50%) rotate(-45deg);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover: línea se acorta + aparece flecha */
+.download-link:hover::before {
+  width: 1.2rem;
+}
+
+.download-link:hover::after {
   opacity: 1;
 }
 
-/* agregado el 29/06 */
+/* Variantes cromáticas */
+.download-link.primary {
+  color: #C9483B; /* rojo editorial */
+}
+
+.download-link.primary::before {
+  background-color: #C9483B;
+}
+
+.download-link.secondary {
+  color: #6FAFB0; /* verde-azulado técnico */
+}
+
+.download-link.secondary::before {
+  background-color: #6FAFB0;
+}
+
 
 /* =========================================================
-   ÍNDICE LATERAL
+   8. GRÁFICOS / FIGURAS
    ========================================================= */
 
-/* Desktop: grid de dos columnas, toc al costado */
-.report-container:has(.report-toc) {
-  display: grid;
-  grid-template-columns: 260px minmax(0, 900px);
-  grid-template-areas:
-    "toc header"
-    "toc body";
-  gap: 3rem;
-  align-items: start;
+.report-figure {
+  max-width: 720px;
+  margin: 1.5rem auto;
 }
 
-.report-container:has(.report-toc) .report-header { grid-area: header; }
-.report-container:has(.report-toc) .report-body   { grid-area: body; }
-
-.report-toc {
-  grid-area: toc;
-  position: sticky;
-  top: 7rem;
-  max-height: calc(100vh - 7rem);
-  overflow-y: auto;
-  padding-right: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.report-toc h4 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  display: inline-block;
-  background-color: #0E3E36;
-  color: white;
-  padding: 2px 4px;
-}
-
-.report-toc a {
+/* Imágenes estáticas del reporte (centrado + lightbox + sombra) */
+.report-figure img {
   display: block;
-  margin-bottom: .8rem;
-  color: #666;
-  text-decoration: none;
-  padding: 0.3rem 0.6rem;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
   border-radius: 4px;
-  transition: background-color 0.35s ease, color 0.35s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.report-toc a:hover {
-  background-color: #0E3E36;
-  color: #ffffff;
+.report-figure img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
 }
 
-/* Mobile / ventana angosta: vuelve al flujo normal del documento
-   (header -> toc -> body), sin grid */
-@media (max-width: 1100px) {
-  .report-container:has(.report-toc) {
-    display: block;
-  }
-  .report-toc {
-    position: static;
-    margin: 1.5rem 0 2rem;
+@media (max-width: 768px) {
+  .report-figure {
+    max-width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 
-span[id] {
-  scroll-margin-top: 7rem;
+/* Figuras en fila */
+.figure-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-::selection {
-  background-color: #0E3E36;
-  color: white;
+.figure-row img {
+  flex: 0 0 calc(48% - 1rem);
+  max-width: calc(48% - 1rem);
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .figure-row {
+    gap: 1rem;
+  }
+
+  .figure-row img {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Lightbox */
+#lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+  z-index: 10000;
+  cursor: zoom-out;
+}
+
+#lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transform: scale(0.95);
+  transition: transform 0.25s ease;
+}
+
+#lightbox-overlay.active img {
+  transform: scale(1);
+}
+
+/* Fix Plotly — evitar que la leyenda sea recortada */
+.report-figure,
+.report-figure .html-widget,
+.report-figure .plotly,
+.report-figure .svg-container {
+  overflow: visible !important;
+}
+
+.report-figure .html-widget,
+.report-figure .svg-container {
+  width: 100% !important;
+}
+
+
+/* =========================================================
+   9. SCROLL PROGRESS BAR
+   ========================================================= */
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 0%;
+  background: #0E3E36;
+  z-index: 9999;
+  transition: height 0.08s linear;
 }
