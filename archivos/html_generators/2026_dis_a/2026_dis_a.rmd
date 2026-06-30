@@ -14,20 +14,6 @@ output:
 <article class="report">
 <div id="scroll-progress"></div>
 
-<div class="report-wrapper">
-
-<nav class="report-toc">
-  <h4>Contenido</h4>
-  <a href="#canastas-indec">Canastas del INDEC</a>
-  <a href="#adultos-distinto-sexo">Hogares por sexo</a>
-  <a href="#cantidad-hijos">Cantidad de hijos</a>
-  <a href="#edad-hijos">Edad de los hijos</a>
-  <a href="#edad-jefes">Edad de los jefes del hogar</a>
-  <a href="#adultos-distinto-sexo-ind">Hogares individuales</a>
-  <a href="#hacia-nuevas-canastas">Hacia nuevas mediciones</a>
-  <a href="#nota-metodologica">Nota metodológica</a>
-</nav>
-
   <div class="report-container">
 
     <header class="report-header">
@@ -38,6 +24,19 @@ output:
   
     </header>
     
+    <nav class="report-toc">
+  <h4>Contenido</h4>
+  <a href="#canastas-indec">Canastas del INDEC</a>
+  <a href="#adultos-distinto-sexo">Hogares por sexo</a>
+  <a href="#cantidad-hijos">Cantidad de hijos</a>
+  <a href="#edad-hijos">Edad de los hijos</a>
+  <a href="#edad-jefes">Edad de los jefes del hogar</a>
+  <a href="#adultos-distinto-sexo-ind">Hogares individuales</a>
+  <a href="#hacia-nuevas-canastas">Hacia nuevas mediciones</a>
+  <a href="#nota-metodologica">Nota metodológica</a>
+    </nav>
+
+
 <section class="report-body">
 
 <p style="text-align: justify;">
@@ -245,7 +244,7 @@ knitr::include_graphics("graficos/2026_dis_a/g5.png")
 
 <p style="text-align: justify;">
 
-Vale la pena observar estas dimensiones de manera individual. <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">El 68,3% de los hogares tiene exactamente un adulto hombre (conviva o no con una mujer adulta), mientras que el 77,3% tiene exactamente una adulta mujer (conviva o no con un hombre adulto)</span>. Estas categorías no son mutuamente excluyentes, precisamente la intersección entre ambas es lo que constituye el 52,2% que vimos antes: los hogares con un hombre y una mujer adultos simultáneamente. Esto deja en evidencia que, si bien cada condición por separado es frecuente, exigir que se cumplan ambas a la vez ya reduce sustancialmente el universo de hogares que se ajustan a la familia tipo."
+Vale la pena observar estas dimensiones de manera individual. <span style="background-color: #0E3E36; color: white; padding: 2px 4px;">El 68,3% de los hogares tiene exactamente un adulto hombre (conviva o no con una mujer adulta), mientras que el 77,3% tiene exactamente una adulta mujer (conviva o no con un hombre adulto)</span>. Estas categorías no son mutuamente excluyentes, precisamente la intersección entre ambas es lo que constituye el 52,2% que vimos antes: los hogares con un hombre y una mujer adultos simultáneamente. Esto deja en evidencia que, si bien cada condición por separado es frecuente, exigir que se cumplan ambas a la vez ya reduce sustancialmente el universo de hogares que se ajustan a la familia tipo.
 
 </p>
 

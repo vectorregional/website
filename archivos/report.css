@@ -29,17 +29,7 @@
   padding: 0 1.5rem;
 }
 
-/* Cuando el report-container vive dentro de .report-wrapper (notas con
-   índice lateral), el ancho de la columna lo maneja el grid, pero igual
-   necesita su padding lateral propio para no pegar contra el borde en mobile */
-.report-wrapper .report-container {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.report,
-.report-wrapper {
+.report {
   overflow: visible;
 }
 
@@ -501,69 +491,41 @@ html {
    ÍNDICE LATERAL
    ========================================================= */
 
-.report-wrapper {
+/* Desktop: grid de dos columnas, toc al costado */
+.report-container:has(.report-toc) {
   display: grid;
-  grid-template-columns: 260px minmax(0, 900px);
+  grid-template-columns: minmax(0, 900px) 260px;
+  grid-template-areas:
+    "header toc"
+    "body   toc";
   gap: 3rem;
-  justify-content: center;
   align-items: start;
 }
 
-.report-toc {
-  position: sticky;
-  top: 7rem;          /* ← subí este valor para que quede bajo el header */
-  
-  max-height: calc(100vh - 7rem);   /* ← ajustá en consecuencia */
-  overflow-y: auto;
+.report-container:has(.report-toc) .report-header { grid-area: header; }
+.report-container:has(.report-toc) .report-body   { grid-area: body; }
 
+.report-toc {
+  grid-area: toc;
+  position: sticky;
+  top: 7rem;
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-.report-toc h4 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  display: inline-block;
-  background-color: #0E3E36;
-  color: white;
-  padding: 2px 4px;
-}
-
-.report-toc a {
-  display: block;
-  margin-bottom: .8rem;
-  color: #666;
-  text-decoration: none;
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  transition: background-color 0.35s ease, color 0.35s ease;
-}
-
-.report-toc a:hover {
-  background-color: #0E3E36;
-  color: #ffffff;
-}
-
-.report,
-.report-wrapper {
-  overflow: visible; /* o directamente no definir overflow */
-}
-
-/* Mobile */
-
+/* Mobile / ventana angosta: vuelve al flujo normal del documento
+   (header -> toc -> body), sin grid */
 @media (max-width: 1100px) {
-
-  .report-wrapper {
+  .report-container:has(.report-toc) {
     display: block;
   }
-
   .report-toc {
     position: static;
-    margin-bottom: 2rem;
+    margin: 1.5rem 0 2rem;
   }
-
 }
 
 span[id] {
