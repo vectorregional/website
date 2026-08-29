@@ -1,0 +1,56 @@
+---
+title: "¿Cuál es el costo de la desinflación?"
+description: "Efectos del esquema económico vigente sobre la actividad, el empleo y los ingresos en Argentina, a más de dos años del inicio del programa de estabilización."
+keywords: "desinflación, actividad económica, desempleo, informalidad, salarios reales, Argentina, estabilización"
+output:
+  html_document:
+    self_contained: false
+    theme: null
+    highlight: null
+    template: !expr here::here("archivos", "report_template.html")
+---
+```{=html}
+<article class="report">
+  <div class="report-container">
+<header class="report-header">
+  <p class="report-kicker">Coyuntura · Actividad, empleo e ingresos</p>
+  <h1>¿Cuál es el costo <br> de la desinflación?</h1>
+  <p class="report-date">Agosto 2026</p>
+</header>
+<section class="report-body">
+<p style="text-align: justify;">
+En noviembre de 2023 la inflación mensual en Argentina se ubicaba en torno al 12,8%, con una variación interanual de 160,9%. Al asumir la presidencia en diciembre de ese año, el gobierno de Javier Milei lanzó un programa de estabilización articulado sobre tres pilares: la <strong>política fiscal</strong>, la <strong>monetaria</strong> y la <strong>cambiaria</strong>.
+El programa logró una fuerte desaceleración de la inflación: hacia julio de 2026 la mensual fue del 2,1% y la interanual del 33,8%. Pero trajo costos macroeconómicos —<strong>caída de la actividad</strong>, <strong>mayor desempleo e informalidad</strong>, y <strong>menores ingresos</strong>— que se abordan a lo largo de este informe, con el objetivo de dimensionar qué tan extendidos y persistentes resultaron estos efectos a más de dos años del inicio del programa.
+</p>
+<h3 class="figure-title">
+Figura 1. Estimador mensual de actividad económica. Evolución agregada y sectorial<br>
+Serie desestacionalizada, nov-23=100. Período noviembre 2023 - mayo 2026
+</h3>
+<div id="grafico-emae" class="report-figure">
+```
+
+```{r, echo = F, message = F}
+plotly_obj <- readRDS("Grafico/plotly.rds")
+plotly_obj
+```
+
+```{=html}
+ </div>
+<p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
+Fuente: Vector Regional en base a INDEC.
+</p>
+<p style="text-align: justify;">
+El análisis revela una <strong>recuperación heterogénea entre sectores</strong>: mientras el Agropecuario, el Hidrocarburífero y la Minería muestran gran dinamismo, la Industria, la Construcción y el Comercio continúan rezagados respecto de noviembre de 2023. Esta heterogeneidad no es un dato menor: los sectores más dinámicos son precisamente los que tienen <strong>menor capacidad relativa de traccionar empleo</strong> en el resto de la economía, mientras que los rezagados son los que más podrían hacerlo.
+El informe completo profundiza además en los efectos sobre el <strong>empleo</strong> —con una tasa de desocupación que se mantiene 2,1 p.p. por encima de fines de 2023 y un aumento sostenido de la informalidad— y sobre los <strong>ingresos</strong>, donde los salarios públicos, en particular los del sector nacional, aún se ubican muy por debajo de sus valores previos al programa.
+</p>
+<div class="report-downloads">
+  <a href="folder/main_2026e.pdf" class="download-link primary" download>
+    Descargar informe completo
+  </a>
+</div>
+</section>
+  </div>
+</article>
+
+```
+
