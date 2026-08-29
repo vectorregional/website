@@ -44,7 +44,7 @@ El análisis revela una <strong>recuperación heterogénea entre sectores</stron
 El informe completo profundiza además en los efectos sobre el <strong>empleo</strong> —con una tasa de desocupación que se mantiene 2,1 p.p. por encima de fines de 2023 y un aumento sostenido de la informalidad— y sobre los <strong>ingresos</strong>, donde los salarios públicos, en particular los del sector nacional, aún se ubican muy por debajo de sus valores previos al programa.
 </p>
 <div class="report-downloads">
-  <a href="folder/main_2026e.pdf" class="download-link primary" download>
+  <a href="folder/main_2026e.pdf" class="download-link primary" target="_blank" rel="noopener">
     Descargar informe completo
   </a>
 </div>

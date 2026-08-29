@@ -70,7 +70,7 @@ plotly_obj
 
 
   <div class="report-downloads">
-    <a href="folder/main_2026a.pdf" class="download-link primary" download>
+    <a href="folder/main_2026a.pdf" class="download-link primary" target="_blank" rel="noopener">
       Descargar documento de trabajo
     </a>
   

@@ -59,7 +59,7 @@ Además de cuantificar estos cambios, el informe identifica cuáles fueron los p
 </p>
 
 <div class="report-downloads">
-  <a href="folder/main_2026d.pdf" class="download-link primary" download>
+  <a href="folder/main_2026d.pdf" class="download-link primary" target="_blank" rel="noopener">
     Descargar informe completo
   </a>
 </div>
