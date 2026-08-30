@@ -20,7 +20,7 @@ output:
 <section class="report-body">
 <p style="text-align: justify;">
 En noviembre de 2023 la inflación mensual en Argentina se ubicaba en torno al 12,8%, con una variación interanual de 160,9%. Al asumir la presidencia en diciembre de ese año, el gobierno de Javier Milei lanzó un programa de estabilización articulado sobre tres pilares: la <strong>política fiscal</strong>, la <strong>monetaria</strong> y la <strong>cambiaria</strong>.
-El programa logró una fuerte desaceleración de la inflación: hacia julio de 2026 la mensual fue del 2,1% y la interanual del 33,8%. Pero trajo costos macroeconómicos —<strong>caída de la actividad</strong>, <strong>mayor desempleo e informalidad</strong>, y <strong>menores ingresos</strong>— que se abordan a lo largo de este informe, con el objetivo de dimensionar qué tan extendidos y persistentes resultaron estos efectos a más de dos años del inicio del programa.
+El programa logró una fuerte desaceleración de la inflación: hacia julio de 2026 la mensual fue del 2,1% y la interanual del 33,8%. Pero trajo costos macroeconómicos —<strong>una recuperación heterogénea, con retrocesos en sectores relevantes</strong>, <strong>mayor desempleo e informalidad</strong> y <strong>menores ingresos</strong>— que se abordan a lo largo de este informe, con el objetivo de dimensionar qué tan extendidos y persistentes resultaron estos efectos a más de dos años del inicio del programa.
 </p>
 <h3 class="figure-title">
 Figura 1. Estimador mensual de actividad económica. Evolución agregada y sectorial<br>
