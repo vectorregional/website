@@ -29,7 +29,7 @@ Serie desestacionalizada, nov-23=100. Período noviembre 2023 - mayo 2026
 <div id="grafico-emae" class="report-figure">
 ```
 
-```{r, echo = F, message = F}
+```{r, echo = F, message = F, warning=FALSE}
 plotly_obj <- readRDS("Grafico/plotly.rds")
 plotly_obj
 ```

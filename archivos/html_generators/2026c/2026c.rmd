@@ -31,7 +31,7 @@ output:
   <div id="grafico-sectores" class="report-figure">
 ```
 
-```{r, echo = F, message = F}
+```{r, echo = F, message = F, warning=FALSE}
 library(plotly)
 plotly_obj <- readRDS("grafico/plotly.rds")
 plotly_obj

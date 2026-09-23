@@ -38,7 +38,7 @@ Series desestacionalizadas (Base 100 = nov-23)
 <div id="grafico-formal" class="report-figure">
 ```
 
-```{r, echo = F, message = F}
+```{r, echo = F, message = F, warning=FALSE}
 plotly_obj <- readRDS("grafico/plotly.rds")
 plotly_obj
 ```
