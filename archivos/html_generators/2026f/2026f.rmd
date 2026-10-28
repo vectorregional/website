@@ -29,7 +29,7 @@ Frente a la idea de que la mora es consecuencia natural del boom crediticio, la 
 </p>
 
 <h3 class="figure-title">
-Figura 1. Tasa de morosidad por departamento de la provincia de Santa Fe br>
+Figura 1. Tasa de morosidad por departamento de la provincia de Santa Fe <br>
 Diciembre de 2025, en porcentajes
 </h3>
 <div id="grafico-emae" class="report-figure">
