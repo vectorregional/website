@@ -1,0 +1,64 @@
+---
+title: "¿Cómo se explica el sobreendeudamiento de las familias?"
+description: "Morosidad, crédito, mercado de trabajo y condiciones estructurales de los territorios en Argentina y en la provincia de Santa Fe."
+keywords: "sobreendeudamiento, morosidad, crédito, desempleo, informalidad, empleo registrado, NBI, Santa Fe, Argentina"
+output:
+  html_document:
+    self_contained: false
+    theme: null
+    highlight: null
+    template: !expr here::here("archivos", "report_template.html")
+---
+```{=html}
+<article class="report">
+  <div class="report-container">
+<header class="report-header">
+  <p class="report-kicker">Coyuntura · Crédito, empleo y territorio</p>
+  <h1>¿Cómo se explica el <br> sobreendeudamiento de las familias?</h1>
+  <p class="report-date">Octubre 2026</p>
+</header>
+<section class="report-body">
+
+<p style="text-align: justify;">
+Compartimos el resumen de nuestra participación en la <strong>Jornada de debate sobre sobreendeudamiento de las familias</strong>, realizada el 20 de octubre de 2026 en la Cámara de Diputados de la Provincia de Santa Fe. A continuación se presentan los principales resultados del análisis que expusimos sobre la morosidad de los hogares, sus causas y su distribución en el territorio.
+</p>
+
+<p style="text-align: justify;">
+El aumento de la morosidad de las familias es hoy uno de los principales problemas macroeconómicos de la Argentina. Según el Banco Central, en agosto de 2026 el ratio de deuda en mora del sistema financiero alcanzó el 16,1%, <strong>el valor más alto desde que se registra el indicador (enero de 2010)</strong>, con 22 meses consecutivos de aumento. El deterioro es aún mayor en las personas físicas (18,4%) y en las deudas con proveedores de financiamiento no bancario (31,3%). Medido por cantidad de deudores, <strong>cerca de 6 millones de personas, el 27% del total, tienen al menos un crédito impago</strong>.
+Frente a la idea de que la mora es consecuencia natural del boom crediticio, la evidencia presentada indica que <strong>el sobreendeudamiento es la expresión crediticia de un deterioro de los ingresos</strong>: la variable que acompaña el aumento de la morosidad es el desempleo, junto con la informalidad y las condiciones estructurales de cada territorio.
+</p>
+
+<h3 class="figure-title">
+Figura 1. Variación de la tasa de desempleo y variación de la tasa de morosidad<br>
+54 países, 2025 vs 2023. En puntos porcentuales
+</h3>
+<div id="grafico-emae" class="report-figure">
+```
+
+```{r, echo = F, message = F, warning=FALSE}
+plotly_obj <- readRDS("Grafico/plotly.rds")
+plotly_obj
+```
+
+```{=html}
+ </div>
+<p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
+Fuente: Vector Regional en base al Banco Mundial.
+</p>
+<p style="text-align: justify;">
+El análisis muestra que <strong>los países con mayor profundidad del crédito presentan menores tasas de morosidad</strong> y que quienes más expandieron el crédito entre 2023 y 2025 no registraron mayores aumentos de la mora. Argentina, aun tras la reciente expansión, combina un nivel de crédito bajo en términos internacionales con una mora elevada. A nivel nacional, <strong>nueve de las doce provincias con mayor pérdida de empleo privado registrado se encuentran también entre las de mayor morosidad</strong>, y la coincidencia asciende a diez de doce al considerar la informalidad. En la provincia de Santa Fe, donde el empleo privado registrado cayó 2,4% entre diciembre de 2023 y diciembre de 2025, <strong>la pobreza estructural es la variable que mejor explica la distribución territorial de la mora</strong>: la correlación entre la población en hogares con NBI y la tasa de morosidad por departamento es de 0,88.
+El informe completo profundiza en estos resultados a nivel internacional, nacional, provincial y departamental.
+</p>
+<div class="report-downloads">
+  <a href="folder/main_2026f.pdf" class="download-link primary" target="_blank" rel="noopener">
+    Descargar informe completo
+  </a>
+  <a href="folder/slide_2026f.pdf" class="download-link presentation" target="_blank" rel="noopener">
+    Descargar presentación
+  </a>
+</div>
+</section>
+  </div>
+</article>
+
+```

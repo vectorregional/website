@@ -416,6 +416,13 @@ span[id] {
   background-color: #6FAFB0;
 }
 
+.download-link.presentation {
+  color: #3F7FB0; /* azul presentación */
+}
+
+.download-link.presentation::before {
+  background-color: #3F7FB0;
+}
 
 /* =========================================================
    8. GRÁFICOS / FIGURAS

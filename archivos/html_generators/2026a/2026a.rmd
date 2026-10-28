@@ -40,7 +40,7 @@ output:
   <div id="grafico-prediccion" class="report-figure">
 ```
 
-```{r, echo = F, message = F}
+```{r, echo = F, message = F, warning=FALSE}
 library(plotly)
 
 
