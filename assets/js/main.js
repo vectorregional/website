@@ -118,12 +118,28 @@
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
+    const container = isotopeItem.querySelector('.isotope-container');
+
+    // Guardamos la posición original de cada tarjeta en el HTML (0, 1, 2...)
+    container.querySelectorAll('.isotope-item').forEach(function(el, i) {
+      el.dataset.orden = i;
+    });
+
+    imagesLoaded(container, function() {
+      initIsotope = new Isotope(container, {
         itemSelector: '.isotope-item',
         layoutMode: layout,
         filter: filter,
-        sortBy: sort
+        getSortData: {
+          orden: function(el) {
+            const i = parseInt(el.dataset.orden, 10);
+            // la primera tarjeta (Notas) queda fija al principio;
+            // el resto, de la última a la primera
+            return i === 0 ? -9999 : -i;
+          }
+        },
+        sortBy: 'orden',
+        sortAscending: true
       });
     });
 
