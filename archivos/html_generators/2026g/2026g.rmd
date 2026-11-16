@@ -1,0 +1,55 @@
+---
+title: "Desempeño exportador de Santa Fe en 2026"
+description: "Dinámica exportadora provincial y factores relevantes de cara al cierre del año."
+keywords: "exportaciones, Santa Fe, MOA, precios, cantidades, derechos de exportación, MERCOSUR-UE, El Niño, INDEC"
+output:
+  html_document:
+    self_contained: false
+    theme: null
+    highlight: null
+    template: !expr here::here("archivos", "report_template.html")
+---
+```{=html}
+<article class="report">
+  <div class="report-container">
+<header class="report-header">
+  <p class="report-kicker">Coyuntura · Comercio exterior</p>
+  <h1>Desempeño exportador <br> de Santa Fe en 2026</h1>
+  <p class="report-date">Noviembre 2026</p>
+</header>
+<section class="report-body">
+<p style="text-align: justify;">
+En los últimos años, el país experimentó un crecimiento significativo en sus niveles de exportación. Entre enero y septiembre de 2026 Argentina exportó bienes por 77.267 millones de dólares, un incremento del 21,6% respecto a igual período de 2025. Dentro de este dinamismo, Santa Fe tuvo un papel protagonista como <strong>segunda provincia exportadora</strong>, solo por detrás de Buenos Aires: aportó el 20,6% del valor exportado a nivel nacional y fue el origen del 49,4% de las manufacturas de origen agropecuario (MOA).
+En ese período la provincia exportó <strong>15.945 millones de dólares</strong>, <strong>un nuevo máximo en valores corrientes</strong> para los primeros nueve meses del año, con aumentos del 35,3% en valor y del 27,7% en peso neto respecto de 2025. Este informe analiza el desempeño santafesino durante el año, los factores que contribuyeron a su desenvolvimiento y algunas fuentes de riesgos y oportunidades de cara al cierre de 2026.
+</p>
+<h3 class="figure-title">
+Figura 1. Evolución del valor de las exportaciones con origen en la provincia de Santa Fe<br>
+Período 2025-2026, en millones de dólares corrientes
+</h3>
+<div id="grafico-exportaciones" class="report-figure">
+```
+
+```{r, echo = F, message = F, warning=FALSE}
+plotly_obj <- readRDS("Grafico/plotly.rds")
+plotly_obj
+```
+
+```{=html}
+ </div>
+<p style="font-size: 0.85rem; color: #666; margin-top: -0.1rem;">
+Fuente: Vector Regional en base a INDEC.
+</p>
+<p style="text-align: justify;">
+El análisis muestra que, a diferencia de 2022, <strong>la coyuntura actual se apoya también en el volumen</strong>: las exportaciones alcanzaron un máximo histórico de 30.227 miles de toneladas, con las <strong>MOA</strong> explicando el 79,6% del total. Entre los factores detrás de este dinamismo se destacan la <strong>cosecha récord de la campaña 2025/2026</strong>, la <strong>reducción de los derechos de exportación</strong> y el <strong>acuerdo MERCOSUR-UE</strong>.
+El informe completo profundiza además en los <strong>factores clave de cara al cierre del año</strong> —el fenómeno de "El Niño", la evolución de los precios internacionales y las oportunidades en el mercado europeo de carnes— y en la distinción entre elementos coyunturales y estructurales, como la <strong>concentración de la demanda en el mercado asiático</strong> (46,0% de las exportaciones entre enero y agosto) y el mayor peso de bienes sensibles a shocks de clima y precios.
+</p>
+<div class="report-downloads">
+  <a href="folder/main_2026g.pdf" class="download-link primary" target="_blank" rel="noopener">
+    Descargar informe completo
+  </a>
+</div>
+</section>
+  </div>
+</article>
+
+```
